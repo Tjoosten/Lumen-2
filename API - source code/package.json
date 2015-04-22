@@ -1,0 +1,31 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "description": "Fallen Soldiers API",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "World",
+    "War",
+    "API"
+  ],
+  "author": "Tim Joosten",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.10.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^1.3.3"
+  }
+}
