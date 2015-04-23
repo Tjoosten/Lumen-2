@@ -62,14 +62,15 @@
      * @return Response
      */
     public function graveyard($id) {
-      $graveyard = Graven::find($id);
+      $graveyard = Graven::where('id', $id)->get();
+      $dbResult  = new Collection($graveyard, $this->transformGraveyard());
 
       if(count($graveyard) == 0) {
         $content = $this->transformNoGraveyard();
         $status  = 200;
         $mime    = 'application/json';
       } else {
-        $content = $this->transformNoGraveyard();
+        $content = $this->fractal->createData($dbResult)->toJson();
         $status  = 200;
         $mime    = 'application/json';
       }
