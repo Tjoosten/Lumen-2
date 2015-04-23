@@ -7,7 +7,7 @@
 
   use Illuminate\Http\Response;
 
-  class ApiBegraafplaatsen extends Controller {
+  class ApiBegraafplaatsen extends CallbackGraveyards {
 
     /**
      * Display all the graveyards.
@@ -19,6 +19,19 @@
      */
     public function graveyards($parse) {
       $graveyards = Graven::all();
+
+      switch($parse) {
+        case 'json':
+          $status  = 200; // HTTP code: Successfull request.
+          $content = Graven::all();
+          $mime    = 'application/json';
+        break;
+
+        default:
+          $status  = 400; // HTTP code: Bad request:
+          $content = $this->CallbackInvalidParseOption();
+          $mime    = 'application/json';
+      }
 
       return response()->json([
         'Error'      => false,
