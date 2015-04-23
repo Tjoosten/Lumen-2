@@ -34,7 +34,6 @@
      * @access public
      * @link   GET /Graveyards/{id}
      * @param  $id, integer, the graveyards id.
-     * @param  $parse, string, The parsing method.
      * @return Response
      */
     public function graveyard($parse, $id) {
