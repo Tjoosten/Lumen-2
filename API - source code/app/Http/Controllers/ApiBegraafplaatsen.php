@@ -14,29 +14,18 @@
      *
      * @access public
      * @link   GET /Graveyards/all
-     * @param  $parse, string, The parsing method.
      * @return Response
      */
-    public function graveyards($parse) {
-      $graveyards = Graven::all();
-
-      switch($parse) {
-        case 'json':
-          $status  = 200; // HTTP code: Successfull request.
-          $content = Graven::all();
-          $mime    = 'application/json';
-        break;
-
-        default:
-          $status  = 400; // HTTP code: Bad request:
-          $content = $this->CallbackInvalidParseOption();
-          $mime    = 'application/json';
-      }
+    public function graveyards() {
+      $status  = 200; // HTTP code: Successfull request.
+      $content = Graven::all();
+      $mime    = 'application/json';
+       
       
       $reponse = response($content, $status)
       $response->header('Content-Type', $mime);
 
-    return $response;
+      return $response;
     }
 
 
