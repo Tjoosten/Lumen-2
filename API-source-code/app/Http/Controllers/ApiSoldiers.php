@@ -1,5 +1,14 @@
 <?php
 
+  /**
+   * API information
+   *
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
+   */
+
   namespace App\Http\Controllers;
 
   use App\Models\Soldaten;

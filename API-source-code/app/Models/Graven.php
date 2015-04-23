@@ -1,25 +1,29 @@
 <?php
 
-namespace App\Models;
+  namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Graven extends Model {
+  use Illuminate\Database\Eloquent\Model;
 
   /**
-   * The database table
-   *
-   * @access protected
-   * @var    $hidden
+   * DB: Model for all the graveyards.
    */
-  protected $table = 'Begraafplaatsen';
 
-  /**
-   * Hidden columns
-   *
-   * @access protected
-   * @var    $hidden
-   */
-  protected $hidden = ['updated_at', 'created_at'];
+  class Graven extends Model {
 
-}
+    /**
+     * The database table
+     *
+     * @access protected
+     * @var    $hidden
+     */
+    protected $table = 'Begraafplaatsen';
+
+    /**
+     * Hidden columns
+     *
+     * @access protected
+     * @var    $hidden
+     */
+    protected $hidden = ['updated_at', 'created_at'];
+
+  }
