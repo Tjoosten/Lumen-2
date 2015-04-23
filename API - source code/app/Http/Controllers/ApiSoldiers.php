@@ -24,11 +24,10 @@
      * Display all the soldiers.
      *
      * @access public
-     * @link   GET /{parse}/soldiers/all
-     * @param  $parse, string, The parsing method.
+     * @link   GET /soldiers/all
      * @return Response
      */
-    public function soldiers($parse) {
+    public function soldiers() {
       if ($currentCursorStr = Request::input('cursor', false)) {
         $Soldaten = Soldaten::with('begraafplaats', 'regiment')->where('id', '>', $currentCursorStr)->take(5)->get();
       } else {
@@ -42,18 +41,10 @@
       $resource = new Collection($Soldaten, $this->transformSoldierCallback());
       $resource->setCursor($cursor);
 
-      switch($parse) {
-        case 'json':
-          $content = $this->fractal->createData($resource)->toJson();
-          $status  = 200;
-          $mime    = 'application/json';
-        break;
-
-        default:
-          $content = $this->transformNoSoldier();
-          $status  = 200;
-          $mime    = 'application/json';
-      }
+    
+      $content = $this->fractal->createData($resource)->toJson();
+      $status  = 200;
+      $mime    = 'application/json';
 
       $response = response($content, $status);
       $response->header('Content-Type', $mime);
@@ -67,32 +58,21 @@
      * @access public
      * @link   GET /soldiers/{id}
      * @param  $id, integer, soldiers DB id.
-     * @param  $pase, string, the parsing option.
      * @return Response.
      */
-    public function soldier($parse, $id) {
+    public function soldier($id) {
       $Soldaat       = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
       $outputLayout  = new Collection($Soldaat, $this->transformSoldierCallback());
 
+    
       if(count($Soldaat) === 0) {
-        return response()->json([
-          'Error'   => true,
-          'message' => 'No soldier found.',
-        ], 200)->header('Content-type', 'application/json');
-      }
-
-      switch($parse) {
-        case 'json':
-          $content = $this->fractal->createData($outputLayout)->toJson();
-          $status  = 200;
-          $mime    = 'application/json';
-        break;
-
-        default:
-          $content = $this->transformNoSoldier();
-          $status  = 400;
-          $mime    = 'application/json';
-
+        $content = $this->transformNoSoldiers();
+        $status  = 200
+        $mime    = 'application/json';
+      } else {
+        $content = $this->fractal->createData($outputLayout)->toJson();
+        $status  = 200;
+        $mime    = 'application/json';
       }
 
       $response = response($content, $status);
