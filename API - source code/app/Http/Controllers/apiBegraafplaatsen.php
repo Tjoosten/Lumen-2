@@ -32,12 +32,11 @@
           $content = $this->CallbackInvalidParseOption();
           $mime    = 'application/json';
       }
+      
+      $reponse = response($content, $status)
+      $response->header('Content-Type', $mime);
 
-      return response()->json([
-        'Error'      => false,
-        'Rows'       => count($graveyards),
-        'Graveyards' => $graveyards,
-      ], 200)->header('Content-Type', 'application/json');
+    return $response;
     }
 
 
