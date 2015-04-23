@@ -11,7 +11,10 @@
      * @return callable
      */
     public function transformNoGraveyard() {
-      
+       return [
+          'error'   => true,
+          'message' => 'No graveyard found',
+        ];
     }
     
   }
