@@ -24,4 +24,5 @@ $app->get('/{parse}/graveyard/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@gr
 
 // Routes for regiments.
 $app->get('/regiments/all', 'App\Http\Controllers\ApiRegiments@regiments');
+$app->get('/regiments/{id}', 'App\Http\Controllers\ApiRegiments@regiment');
 
