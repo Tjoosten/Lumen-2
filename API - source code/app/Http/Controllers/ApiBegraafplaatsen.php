@@ -41,17 +41,18 @@
       $graveyard = Graven::find($id);
 
       if(count($graveyard) == 0) {
-        return response()->json([
-          'Error'   => true,
-          'Rows'    => count($graveyard),
-          'message' => 'No graveyard found.',
-        ], 200)->header('Content-type', 'application/json');
+        $content = $this->NoGraveyard();
+        $status  = 200;
+        $mime    = 'application/json';
       } else {
-        return response()->json([
-          'Error'     => false,
-          'Rows'      => count($graveyard),
-          'Graveyard' => $graveyard
-        ], 200)->header('Content-Type','application/json');
+        $content = 'meh';
+        $status  = 200;
+        $mime    = 'application/json';
       }
+      
+      $response = reponse($content, $status);
+      $response->header('Content-Type', $mime);
+      
+      return $response;
     }
   }
