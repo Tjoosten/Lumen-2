@@ -21,7 +21,6 @@
       $content = Graven::all();
       $mime    = 'application/json';
        
-      
       $reponse = response($content, $status)
       $response->header('Content-Type', $mime);
 
