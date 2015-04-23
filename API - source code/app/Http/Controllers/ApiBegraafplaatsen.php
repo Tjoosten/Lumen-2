@@ -40,7 +40,7 @@
       $graveyard = Graven::find($id);
 
       if(count($graveyard) == 0) {
-        $content = $this->NoGraveyard();
+        $content = $this->transformNoGraveyard();
         $status  = 200;
         $mime    = 'application/json';
       } else {
