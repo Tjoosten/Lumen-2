@@ -67,6 +67,6 @@ class Rowcount extends Command {
     $this->info("Political Prisoners:   $countPrisoners");
     $this->info("Resistance Fighters:   $countResistance");
     $this->comment("---------------------- $all");
-	}
+  }
 
 }

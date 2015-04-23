@@ -2,6 +2,15 @@
 
 namespace App\Http\Controllers;
 
+/**
+ * Controller for various API outputs.
+ *
+ * @author  Tim Joosten
+ * @license MIT
+ * @version 1.0.0
+ * @package API
+ */
+
 Class ApiVarious extends Controller {
 
   /**

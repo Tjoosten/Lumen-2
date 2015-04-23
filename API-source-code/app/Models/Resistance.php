@@ -1,17 +1,26 @@
 <?php
 
-namespace App\Models;
+  namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Resistance extends Model {
+  use Illuminate\Database\Eloquent\Model;
 
   /**
-   * The database table
+   * DB: Model for the Resistance fighters.
    *
-   * @access protected
-   * @var    $hidden
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
    */
-  protected $table = 'Verzet_strijders';
 
-}
+  class Resistance extends Model {
+
+    /**
+     * The database table
+     *
+     * @access protected
+     * @var    $hidden
+     */
+    protected $table = 'Verzet_strijders';
+
+  }

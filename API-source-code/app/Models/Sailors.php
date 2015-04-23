@@ -6,6 +6,11 @@
 
   /**
    * DB: Model for the drowned sailors table.
+   *
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
    */
 
   class Sailors extends Model {

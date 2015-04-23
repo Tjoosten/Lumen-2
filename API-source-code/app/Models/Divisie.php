@@ -1,25 +1,34 @@
 <?php
 
-namespace App\Models;
+  namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Divisie extends Model {
+  use Illuminate\Database\Eloquent\Model;
 
   /**
-   * The database table
+   * DB: Model for all the military regiments.
    *
-   * @access protected
-   * @var    $hidden
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
    */
-  protected $table = 'Regimenten';
 
-  /**
-   * Hidden columns
-   *
-   * @access protected
-   * @var    $hidden
-   */
-  protected $hidden = ['updated_at', 'created_at'];
+  class Divisie extends Model {
 
-}
+    /**
+     * The database table
+     *
+     * @access protected
+     * @var    $hidden
+     */
+    protected $table = 'Regimenten';
+
+    /**
+     * Hidden columns
+     *
+     * @access protected
+     * @var    $hidden
+     */
+    protected $hidden = ['updated_at', 'created_at'];
+
+  }

@@ -4,6 +4,15 @@
 
   use Illuminate\Database\Eloquent\Model;
 
+  /**
+   * DB: Model for the Military deaths.
+   *
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
+   */
+
   class Soldaten extends Model {
 
     /**

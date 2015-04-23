@@ -1,7 +1,7 @@
 <?php
 
   /**
-   * API information
+   * API: Soldiers Module.
    *
    * @author  Tim Joosten
    * @license MIT

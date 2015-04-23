@@ -6,6 +6,11 @@
 
   /**
    * DB: Model for all the graveyards.
+   *
+   * @author  Tim Joosten
+   * @license MIT
+   * @version 1.0.0
+   * @package Fallen soldiers API.
    */
 
   class Graven extends Model {

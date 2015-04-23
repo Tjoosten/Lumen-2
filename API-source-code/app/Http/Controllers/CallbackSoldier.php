@@ -2,6 +2,7 @@
 
   namespace App\Http\Controllers;
 
+
   class CallbackSoldier extends Controller {
 
     /**
@@ -16,7 +17,7 @@
           'message' => 'No soldier found',
         ];
     }
-    
+
 
     /**
      * [Success]: Callback for the soldier side.
