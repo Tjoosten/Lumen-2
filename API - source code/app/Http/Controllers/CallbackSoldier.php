@@ -10,19 +10,13 @@
      * @access public
      * @return callable
      */
-
-    /**
-     * [Failure]: Invalid parse option
-     *
-     * @access public
-     * @return callable.
-     */
-    public function transformNoSoldier() {
+    public function transformNoSoldiers() {
       return [
-        'error'   => (bool) true,
-        'message' => (string) 'Invalid parse option',
+          'error'   => true,
+          'message' => 'No soldier found',
         ];
     }
+    
 
     /**
      * [Success]: Callback for the soldier side.
