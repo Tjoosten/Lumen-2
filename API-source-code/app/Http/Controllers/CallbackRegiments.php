@@ -2,6 +2,6 @@
 
   namespace App\Http\Controllers;
 
-  class CallbackSoldier extends Controller {
+  class CallbackRegiments extends Controller {
 
   }
