@@ -77,18 +77,28 @@
       if(count($Soldaat) === 0) {
         return response()->json([
           'Error'   => true,
-          'Rows'    => count($Soldaat),
           'message' => 'No soldier found.',
         ], 200)->header('Content-type', 'application/json');
       }
 
-      if($parse === 'json') {
-        return response($this->fractal->createData($outputLayout)->toJson(), 200)
-                ->header('Content-Type', 'application/json');
-      } else {
-        return response()->json($this->transformNoSoldier(), 200)
-                ->header('Content-Type', 'application/json');
+      switch($parse) {
+        case 'json':
+          $content = $this->fractal->createData($outputLayout)->toJson();
+          $status  = 200;
+          $mime    = 'application/json';
+        break;
+
+        default:
+          $content = $this->transformNoSoldier();
+          $status  = 400;
+          $mime    = 'application/json';
+
       }
+
+      $response = response($content, $status);
+      $response->header('Content-Type', $mime);
+
+      return $response;
     }
 
     /**

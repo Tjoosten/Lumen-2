@@ -14,9 +14,10 @@
      *
      * @access public
      * @link   GET /Graveyards/all
+     * @param  $parse, string, The parsing method.
      * @return Response
      */
-    public function graveyards() {
+    public function graveyards($parse) {
       $graveyards = Graven::all();
 
       return response()->json([
@@ -33,9 +34,10 @@
      * @access public
      * @link   GET /Graveyards/{id}
      * @param  $id, integer, the graveyards id.
+     * @param  $parse, string, The parsing method.
      * @return Response
      */
-    public function graveyard($id) {
+    public function graveyard($parse, $id) {
       $graveyard = Graven::find($id);
 
       if(count($graveyard) == 0) {

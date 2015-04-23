@@ -19,5 +19,5 @@ $app->get('/{parse}/soldiers/all', 'App\Http\Controllers\ApiSoldiers@soldiers');
 $app->get('/{parse}/soldiers/{id}', 'App\Http\Controllers\ApiSoldiers@soldier');
 
 // Routes for graveyards?.
-$app->get('/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards');
-$app->get('/graveyard/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@graveyard');
+$app->get('/{parse}/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards');
+$app->get('/{parse}/graveyard/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@graveyard');
