@@ -41,7 +41,6 @@
       $resource = new Collection($Soldaten, $this->transformSoldierCallback());
       $resource->setCursor($cursor);
 
-    
       $content = $this->fractal->createData($resource)->toJson();
       $status  = 200;
       $mime    = 'application/json';
@@ -64,10 +63,10 @@
       $Soldaat       = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
       $outputLayout  = new Collection($Soldaat, $this->transformSoldierCallback());
 
-    
+
       if(count($Soldaat) === 0) {
         $content = $this->transformNoSoldiers();
-        $status  = 200
+        $status  = 200;
         $mime    = 'application/json';
       } else {
         $content = $this->fractal->createData($outputLayout)->toJson();
