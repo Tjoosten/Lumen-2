@@ -5,7 +5,9 @@
   use App\Models\Soldaten;
   use League\Fractal\Manager;
   use League\Fractal\Resource\Collection;
+  use League\Fractal\Pagination\Cursor;
   use Illuminate\Http\Response;
+  use Request;
 
   class ApiSoldiers extends CallbackSoldier {
 
@@ -27,19 +29,36 @@
      * @return Response
      */
     public function soldiers($parse) {
-      $soldaten           = Soldaten::with('begraafplaats', 'regiment');
-      $variable['result'] = $soldaten->get();
-      $outputLayout       = new Collection($variable['result'], $this->transformSoldierCallback());
-
-      if($parse === 'json') {
-        return response($this->fractal->createData($outputLayout)->toJson(), 200)
-                ->header('Content-Type', 'application/json');
-      } elseif($parse === 'html') {
-        return view('soldiersTable', $variable);
+      if ($currentCursorStr = Request::input('cursor', false)) {
+        $Soldaten = Soldaten::with('begraafplaats', 'regiment')->where('id', '>', $currentCursorStr)->take(5)->get();
       } else {
-        return response()->json($this->transformNoSoldier(), 200)
-                ->header('Content-Type', 'application/json');
+        $Soldaten = Soldaten::with('begraafplaats', 'regiment')->take(5)->get();
       }
+
+      $prevCursorStr = Request::input('prevCursor', 6);
+      $newCursorStr  = $Soldaten->last()->id;
+      $cursor        = new Cursor($currentCursorStr, $prevCursorStr, $newCursorStr, $Soldaten->count());
+
+      $resource = new Collection($Soldaten, $this->transformSoldierCallback());
+      $resource->setCursor($cursor);
+
+      switch($parse) {
+        case 'json':
+          $content = $this->fractal->createData($resource)->toJson();
+          $status  = 200;
+          $mime    = 'application/json';
+        break;
+
+        default:
+          $content = $this->transformNoSoldier();
+          $status  = 200;
+          $mime    = 'application/json';
+      }
+
+      $response = response($content, $status);
+      $response->header('Content-Type', $mime);
+
+      return $response;
     }
 
     /**
@@ -52,14 +71,13 @@
      * @return Response.
      */
     public function soldier($parse, $id) {
-      $soldier            = Soldaten::with('begraafplaats', 'regiment')->where('id', $id);
-      $variable['result'] = $soldier->get();
-      $outputLayout       = new Collection($variable['result'], $this->transformSoldierCallback());
+      $Soldaat       = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
+      $outputLayout  = new Collection($Soldaat, $this->transformSoldierCallback());
 
-      if(count($variable['result']) === 0) {
+      if(count($Soldaat) === 0) {
         return response()->json([
           'Error'   => true,
-          'Rows'    => count($variable['result']),
+          'Rows'    => count($Soldaat),
           'message' => 'No soldier found.',
         ], 200)->header('Content-type', 'application/json');
       }
@@ -67,8 +85,6 @@
       if($parse === 'json') {
         return response($this->fractal->createData($outputLayout)->toJson(), 200)
                 ->header('Content-Type', 'application/json');
-      } elseif($parse === 'html') {
-        return view('soldiersInfo', $variable);
       } else {
         return response()->json($this->transformNoSoldier(), 200)
                 ->header('Content-Type', 'application/json');

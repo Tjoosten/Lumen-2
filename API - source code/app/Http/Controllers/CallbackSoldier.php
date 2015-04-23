@@ -5,7 +5,14 @@
   class CallbackSoldier extends Controller {
 
     /**
-     * [Failure]:
+     * [Failure] = No soldiers found.
+     *
+     * @access public
+     * @return callable
+     */
+
+    /**
+     * [Failure]: Invalid parse option
      *
      * @access public
      * @return callable.
