@@ -2,7 +2,9 @@
 
 Lumen APi is een gebouwd op het Lumen framework van laravel.
 
-### Documentation
+## Documentation
+
+The APi has its own cli commands, the costum commands are:
 
 ### License
 
