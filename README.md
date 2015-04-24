@@ -6,6 +6,10 @@ Lumen APi is een gebouwd op het Lumen framework van laravel.
 
 The APi has its own cli commands, the costum commands are:
 
+| Command: | Description |
+| :------- | :---------- |
+| `api:count` | Display and count all the database records related to the api |
+
 ### License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
