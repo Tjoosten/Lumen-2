@@ -190,6 +190,40 @@
       }
     ],
     "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/graveyard/33",
+        "type": "json"
+      }
+    ],
+    "error": {
+      "examples": [
+        {
+          "title": "Error response:",
+          "content": "HTTP/1.1 401 Not Authenticated\n{\n  \"error\": true,\n  \"message\": \"No graveyard found\".\n}",
+          "type": "json"
+        }
+      ],
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "Boolean",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Error detection.</p> "
+          },
+          {
+            "group": "Error 4xx",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Error Message.</p> "
+          }
+        ]
+      }
+    },
     "filename": "API-source-code/app/Http/Controllers/ApiBegraafplaatsen.php",
     "groupTitle": "Graveyards"
   },

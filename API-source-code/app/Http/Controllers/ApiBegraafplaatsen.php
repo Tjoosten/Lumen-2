@@ -60,6 +60,19 @@
      * @apiGroup        Graveyards
      * @apiPermission   none
      * @apiVersion      1.0.0
+     *
+     * @apiExample Usage (example):
+     * curl -i http://www.domain.com/graveyard/33
+     *
+     *  @apiErrorExample Error response:
+     *     HTTP/1.1 401 Not Authenticated
+     *     {
+     *       "error": true,
+     *       "message": "No graveyard found".
+     *     }
+     *
+     * @apiError        {Boolean}   error    Error detection.
+     * @apiError        {String}    message  Error Message.
      */
     public function graveyard($id) {
       $graveyard = Graven::where('id', $id)->get();

@@ -136,6 +136,9 @@
       return $response;
     }
 
+    /**
+     * 
+     */
     public function delete() {
       $soldiers = Soldaten::find($id);
       $soldiers->delete();
