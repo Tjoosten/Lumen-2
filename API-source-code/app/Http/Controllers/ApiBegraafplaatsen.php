@@ -41,8 +41,9 @@
       
       // Execution time logging. 
       if($_ENV['APP_DEBUG'] === true) {
+        $logger = app('Psr\Log\LoggerInterface');
         $execTime = '0';
-        Log::info("$_SERVER['REQUEST_URI'] executed in $execTime");
+        $logger->info("$_SERVER['REQUEST_URI'] executed in $execTime");
       }
 
       $prevCursorStr = Request::input('prevCursor', 6);
