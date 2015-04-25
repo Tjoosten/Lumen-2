@@ -38,6 +38,11 @@
       } else {
         $Soldaten = Graven::take(5)->get();
       }
+      
+      // Execution time logging. 
+      if($_ENV['APP_DEBUG'] === true) {
+        // Logging code
+      }
 
       $prevCursorStr = Request::input('prevCursor', 6);
       $newCursorStr  = $Soldaten->last()->id;
