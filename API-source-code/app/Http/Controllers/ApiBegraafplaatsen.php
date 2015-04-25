@@ -38,13 +38,6 @@
       } else {
         $Soldaten = Graven::take(5)->get();
       }
-      
-      // Execution time logging. 
-      if($_ENV['APP_DEBUG'] === true) {
-        $logger = app('Psr\Log\LoggerInterface');
-        $execTime = '0';
-        $logger->info("$_SERVER['REQUEST_URI'] executed in $execTime");
-      }
 
       $prevCursorStr = Request::input('prevCursor', 6);
       $newCursorStr  = $Soldaten->last()->id;
