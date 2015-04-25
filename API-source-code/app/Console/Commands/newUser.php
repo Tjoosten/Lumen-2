@@ -6,33 +6,19 @@
   use Illuminate\Console\Command;
 
   /**
-   * Terminal function for creating new users.
+   * @apiName    Execute the console command (api:newUser).
+   * @apiGroup   CLI Artisan commands
+   * @apiVersion 1.0.0
+   *
+   * @apiSuccess {string} The user is created
+   * @apiError   {string} WARNING: Invalid option or handling cancelled.
    */
 
    class newUser extends Command {
 
-     /**
-      * The console command
-      *
-      * @access protected
-      * @var string
-      */
     protected $name = 'api:newUser';
-
-    /**
-     * The console command description.
-     *
-     * @access protected
-     * @var string
-     */
     protected $description = 'Create a new user for the API';
 
-    /**
-     * Execute the console command?
-     *
-     * @access public
-     * @return mixed
-     */
     public function handle() {
       $firstname = $this->ask('What is the firstname of the user?');
       $lastname  = $this->ask('What is the lastname of the user?');

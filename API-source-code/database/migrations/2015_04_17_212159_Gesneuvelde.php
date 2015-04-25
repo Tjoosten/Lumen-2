@@ -5,12 +5,6 @@
 
 	class Gesneuvelde extends Migration {
 
-		/**
-		 * Run the migrations.
-		 *
-		 * @access public
-		 * @return void
-		 */
 		public function up() {
 
 			Schema::create('Gesneuvelde', function(Blueprint $table) {
@@ -38,12 +32,6 @@
 
 	}
 
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @access public
-		 * @return void
-		 */
 		public function down() {
 			Schema::drop('Gesneuvelde');
 		}

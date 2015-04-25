@@ -12,35 +12,11 @@ use App\Models\Graven;
 use App\Models\Divisie;
 use Illuminate\Console\Command;
 
-/**
- * Terminal function for counting all the database records relaying to the API.
- */
-
 class Rowcount extends Command {
 
-	/**
-	 * The console command name.
-	 *
-   * @access protected
-	 * @var    string
-	 */
 	protected $name = 'api:count';
-
-	/**
-	 * The console command description.
-	 *
-   * @access protected
-	 * @var string
-	 */
 	protected $description = 'Count all the database inserts.';
 
-	/**
-	 * Execute the console command.
-	 *
-   * @access public
-	 * @return mixed
-   * @todo   Document this in the readme.md file.
-	 */
 	public function handle() {
     $countSoldiers   = number_format(count(Soldaten::all()));
     $countGraveyards = number_format(count(Graven::all()));

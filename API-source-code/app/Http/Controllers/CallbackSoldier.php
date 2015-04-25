@@ -5,12 +5,6 @@
 
   class CallbackSoldier extends Controller {
 
-    /**
-     * [Failure] = No soldiers found.
-     *
-     * @access public
-     * @return callable
-     */
     public function transformNoSoldiers() {
       return [
           'error'   => true,
@@ -18,13 +12,6 @@
         ];
     }
 
-
-    /**
-     * [Success]: Callback for the soldier side.
-     *
-     * @access public
-     * @return callable
-     */
     public function transformSoldierCallback() {
       return function($data) {
         return [

@@ -5,12 +5,6 @@
 
 	class Regimenten extends Migration {
 
-		/**
-		 * Run the migrations.
-		 *
-		 * @access public
-		 * @return void
-		 */
 		public function up() {
 
 			Schema::create('Regimenten', function(Blueprint $table) {
@@ -18,15 +12,9 @@
 				$table->string('Regiment');
 				$table->timestamps();
 			});
-			
-		}
 
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @access public
-		 * @return void
-		 */
+		}
+		
 		public function down() {
 			Schema::drop('Regimenten');
 		}

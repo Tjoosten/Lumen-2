@@ -5,11 +5,6 @@
 
 	class Begraafplaatsen extends Migration {
 
-		/**
-		 * Run the migrations.
-		 *
-		 * @return void
-		 */
 		public function up() {
 
 			Schema::create('Gesneuvelde', function(Blueprint $table) {
@@ -23,11 +18,6 @@
 
 		}
 
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @return void
-		 */
 		public function down() {
 			Schama::drop('Begraafplaatsen');
 		}

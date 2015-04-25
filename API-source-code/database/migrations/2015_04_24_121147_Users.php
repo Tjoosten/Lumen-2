@@ -4,12 +4,7 @@
 	use Illuminate\Database\Migrations\Migration;
 
 	class Users extends Migration {
-
-		/**
-		 * Run the migrations.
-		 *
-		 * @return void
-		 */
+		
 		public function up() {
 			Schema::create('Users', function(Blueprint $table) {
 				$table->inscrements('id');
@@ -21,11 +16,6 @@
 			});
 		}
 
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @return void
-		 */
 		public function down() {
 			Schema::drop('Users');
 		}

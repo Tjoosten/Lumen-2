@@ -1,14 +1,5 @@
 <?php
 
-  /**
-   * API: Soldiers Module.
-   *
-   * @author  Tim Joosten
-   * @license MIT
-   * @version 1.0.0
-   * @package Fallen soldiers API.
-   */
-
   namespace App\Http\Controllers;
 
   use App\Models\Soldaten;
@@ -22,21 +13,47 @@
 
     private $fractal;
 
-    /**
-     * Class constructor
-     */
     public function __construct() {
       $this->fractal = new Manager();
     }
 
     /**
-     * Display all the soldiers.
+     * @api             {get} /soldier/all getting all the soldiers.
+     * @apiname         getSoldiers
+     * @apiDescription  Get all the soldiers
+     * @apiGroup        Soldiers
+     * @apiPermission   none
+     * @apiVersion      1.0.0
      *
-     * @access public
-     * @link   GET /soldiers/all
-     * @return Response
+     * @apiSuccess      {Integer} id                 The soldier his DB id.
+     * @apiSuccess      {String}  Voornaam           The firstname.
+     * @apiSuccess      {String}  Achternaam         The lastname.
+     * @apiSuccess      {String}  Geslacht           The gender .
+     * @apiSuccess      {String}  Burgerlijke_stand  The relation status
+     * @apiSuccess      {String}  Geboren_plaats     The place of birth.
+     * @apiSuccess      {String}  Geboren_daatum     The date from birth.
+     * @apiSuccess      {String}  Overleden_plaats   The place of death.
+     * @apiSuccess      {String}  Overleden_datum    The date of death.
+     * @apiSuccess      {String}  Overleden_locatie  The location of death.
+     * @apiSuccess      {String}  Doodsoorzaak       The Cause of death.
+     * @apiSuccess      {String}  Graf_referentie    The grave number.
+     * @apiSuccess      {Integer} herdenking_id      The id of the graveyard.
+     * @apiSuccess      {String}  Begraafplaats      The graveyard
+     * @apiSuccess      {String}  Lengtegraad        Lengtegraad van het kerkhof.
+     * @apiSuccess      {String}  Breedtegraad       Breedtegraad van het kerkhof.
+     * @apiSuccess      {String}  Type               Type graveyard.
+     * @apiSuccess      {String}  Rang               Military rank
+     * @apiSuccess      {string}  Dienst             Service year.
+     * @apiSuccess      {string}  Eenheid            Service country.
+     * @apiSuccess      {string}  Stam_nr            Service number.
+     * @apiSuccess      {Integer} regiment_id        The id of the regiment.
+     * @apiSuccess      {String}  regiment           The regiment
+     * @apiSuccess      {String}  Notitie            Notation about the soldier.
+     *
+     * @apiError        {Boolean} error              Error detectation.
+     * @apiError        {String}  message            The error message.
      */
-    public function soldiers() {
+    public function getSoldiers() {
       if ($currentCursorStr = Request::input('cursor', false)) {
         $Soldaten = Soldaten::with('begraafplaats', 'regiment')->where('id', '>', $currentCursorStr)->take(5)->get();
       } else {
@@ -61,14 +78,44 @@
     }
 
     /**
-     * Get a specific soldier.
+     * @api             {get} /soldiers/{id} get a specific soldier.
+     * @apiname         getSoldier
+     * @apiDescription  Get a specific soldier
+     * @apiGroup        Soldiers
+     * @apiPermission   none
+     * @apiVersion      1.0.0
      *
-     * @access public
-     * @link   GET /soldiers/{id}
-     * @param  $id, integer, soldiers DB id.
-     * @return Response.
+     * @apiParam        {String}  id                 The api off the soldier.
+     *
+     * @apiSuccess      {Integer} id                 The soldier his DB id.
+     * @apiSuccess      {String}  Voornaam           The firstname.
+     * @apiSuccess      {String}  Achternaam         The lastname.
+     * @apiSuccess      {String}  Geslacht           The gender .
+     * @apiSuccess      {String}  Burgerlijke_stand  The relation status
+     * @apiSuccess      {String}  Geboren_plaats     The place of birth.
+     * @apiSuccess      {String}  Geboren_daatum     The date from birth.
+     * @apiSuccess      {String}  Overleden_plaats   The place of death.
+     * @apiSuccess      {String}  Overleden_datum    The date of death.
+     * @apiSuccess      {String}  Overleden_locatie  The location of death.
+     * @apiSuccess      {String}  Doodsoorzaak       The Cause of death.
+     * @apiSuccess      {String}  Graf_referentie    The grave number.
+     * @apiSuccess      {Integer} herdenking_id      The id of the graveyard.
+     * @apiSuccess      {String}  Begraafplaats      The graveyard
+     * @apiSuccess      {String}  Lengtegraad        Lengtegraad van het kerkhof.
+     * @apiSuccess      {String}  Breedtegraad       Breedtegraad van het kerkhof.
+     * @apiSuccess      {String}  Type               Type graveyard.
+     * @apiSuccess      {String}  Rang               Military rank
+     * @apiSuccess      {string}  Dienst             Service year.
+     * @apiSuccess      {string}  Eenheid            Service country.
+     * @apiSuccess      {string}  Stam_nr            Service number.
+     * @apiSuccess      {Integer} regiment_id        The id of the regiment.
+     * @apiSuccess      {String}  regiment           The regiment
+     * @apiSuccess      {String}  Notitie            Notation about the soldier.
+     *
+     * @apiError        {Boolean} error              Error detectation.
+     * @apiError        {String}  message            The error message.
      */
-    public function soldier($id) {
+    public function getSoldier($id) {
       $Soldaat       = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
       $outputLayout  = new Collection($Soldaat, $this->transformSoldierCallback());
 
@@ -89,14 +136,6 @@
       return $response;
     }
 
-    /**
-     * Delete a soldier.
-     *
-     * @access public
-     * @link   GET /soldiers/delete/{id}
-     * @param  $id, integer, soldiers DB id.
-     * @return Response
-     */
     public function delete() {
       $soldiers = Soldaten::find($id);
       $soldiers->delete();

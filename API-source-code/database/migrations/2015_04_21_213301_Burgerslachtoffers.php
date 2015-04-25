@@ -5,11 +5,6 @@
 
 	class Burgerslachtoffers extends Migration {
 
-		/**
-		 * Run the migrations.
-		 *
-		 * @return void
-		 */
 		public function up() {
 
 			Schema::create('Burgerslachtoffers', function(Blueprint $table) {
@@ -35,11 +30,6 @@
 
 		}
 
-		/**
-		 * Reverse the migrations.
-		 *
-		 * @return void
-		 */
 		public function down() {
 			Schema::drop('Burgerslachtoffers');
 		}

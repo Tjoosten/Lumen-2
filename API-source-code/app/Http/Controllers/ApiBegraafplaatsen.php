@@ -14,19 +14,20 @@
 
     private $fractal;
 
-    /**
-     * Class constructor
-     */
     public function __construct() {
       $this->fractal = new Manager();
     }
 
     /**
-     * Display all the graveyards.
+     * @api             {get} /graveyards/all get all the graveyards.
+     * @apiname         graveyards (all)
+     * @apiDescription  Get a all the graveyards.
+     * @apiGroup        Graveyards
+     * @apiPermission   none
+     * @apiVersion      1.0.0
      *
-     * @access public
-     * @link   GET /Graveyards/all
-     * @return Response
+     * @apiError        {Boolean}   error    Error detection.
+     * @apiError        {String}    message  Error Message.
      */
     public function graveyards() {
       if ($currentCursorStr = Request::input('cursor', false)) {
@@ -52,14 +53,13 @@
       return $response;
     }
 
-
     /**
-     * Display a specific graveyard.
-     *
-     * @access public
-     * @link   GET /Graveyards/{id}
-     * @param  $id, integer, the graveyards id.
-     * @return Response
+     * @api             {get} /graveyard/{id} get a specific graveyard.
+     * @apiname         graveyards (specific)
+     * @apiDescription  Get a specific graveyard.
+     * @apiGroup        Graveyards
+     * @apiPermission   none
+     * @apiVersion      1.0.0
      */
     public function graveyard($id) {
       $graveyard = Graven::where('id', $id)->get();

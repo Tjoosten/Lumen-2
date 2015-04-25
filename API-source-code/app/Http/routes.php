@@ -15,8 +15,8 @@
 $app->get('/', 'App\Http\Controllers\ApiVarious@frontpage');
 
 // Routes for the soldiers.
-$app->get('/soldiers/all', 'App\Http\Controllers\ApiSoldiers@soldiers');
-$app->get('/soldiers/{id}', 'App\Http\Controllers\ApiSoldiers@soldier');
+$app->get('/soldiers/all', 'App\Http\Controllers\ApiSoldiers@getSoldiers');
+$app->get('/soldiers/{id}', 'App\Http\Controllers\ApiSoldiers@getSoldier');
 
 // Routes for graveyards?.
 $app->get('/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards');

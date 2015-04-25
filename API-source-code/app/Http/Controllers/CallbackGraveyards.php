@@ -4,12 +4,6 @@
 
   class CallbackGraveyards extends Controller {
 
-    /**
-     * [Failure] = No soldiers found.
-     *
-     * @access public
-     * @return callable
-     */
     public function transformNoGraveyard() {
        return [
           'error'   => true,
@@ -17,12 +11,6 @@
         ];
     }
 
-    /**
-     * [Success]: Callback for the graveyard side.
-     *
-     * @access public
-     * @return callable
-     */
     public function transformGraveyard() {
       return function($data) {
         return [

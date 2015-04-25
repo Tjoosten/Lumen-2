@@ -9,19 +9,18 @@
 
     /**
      * The Artisan commands provided by your application.
-     *
-     * @var array
-      */
+     */
     protected $commands = [
       'App\Console\Commands\Rowcount',
       'App\Console\Commands\newUser',
     ];
 
     /**
-     * Define the application's command schedule.
-     *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-     * @return void
+     * @apiName     Define the application's command schedule.
+     * @apiGroup    CLI Artisan Commands
+     * @apiVersion  1.0.0
+     * @apiParam    \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @apiSuccess  void
      */
     protected function schedule(Schedule $schedule) {
       // Scheduled jobs.
