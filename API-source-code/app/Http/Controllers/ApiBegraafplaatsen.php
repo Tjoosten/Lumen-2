@@ -41,6 +41,7 @@
       
       // Execution time logging. 
       if($_ENV['APP_DEBUG'] === true) {
+        $execTime = '0';
         Log::info("$_SERVER['REQUEST_URI'] executed in $execTime");
       }
 
