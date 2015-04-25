@@ -41,7 +41,7 @@
       
       // Execution time logging. 
       if($_ENV['APP_DEBUG'] === true) {
-        // Logging code
+        Log::info("$_SERVER['REQUEST_URI'] executed in $execTime");
       }
 
       $prevCursorStr = Request::input('prevCursor', 6);
