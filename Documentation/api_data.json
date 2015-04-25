@@ -154,6 +154,13 @@
       }
     ],
     "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/graveyards/all",
+        "type": "json"
+      }
+    ],
     "error": {
       "fields": {
         "Error 4xx": [

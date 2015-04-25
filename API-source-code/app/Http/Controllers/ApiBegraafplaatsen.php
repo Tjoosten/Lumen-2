@@ -26,6 +26,9 @@
      * @apiPermission   none
      * @apiVersion      1.0.0
      *
+     * @apiExample Usage (example):
+     * curl -i http://www.domain.com/graveyards/all
+     *
      * @apiError        {Boolean}   error    Error detection.
      * @apiError        {String}    message  Error Message.
      */
