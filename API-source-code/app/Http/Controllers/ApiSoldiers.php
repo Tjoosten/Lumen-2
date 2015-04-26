@@ -25,6 +25,9 @@
      * @apiPermission   none
      * @apiVersion      1.0.0
      *
+     * @apiExample Usage (example):
+     * curl -i http://www.domain.com/soldiers/all
+     *
      * @apiSuccess      {Integer} id                 The soldier his DB id.
      * @apiSuccess      {String}  Voornaam           The firstname.
      * @apiSuccess      {String}  Achternaam         The lastname.
@@ -87,6 +90,10 @@
      *
      * @apiParam        {String}  id                 The api off the soldier.
      *
+     *
+     * @apiExample Usage (example):
+     * curl -i http://www.domain.com/soldiers/22
+     *
      * @apiSuccess      {Integer} id                 The soldier his DB id.
      * @apiSuccess      {String}  Voornaam           The firstname.
      * @apiSuccess      {String}  Achternaam         The lastname.
@@ -136,10 +143,50 @@
       return $response;
     }
 
+    public function update() {
+
+    }
+
     /**
-     * 
+     * @api             {post} /soldiers/{id} Insert a new soldier.
+     * @apiname         InsertSoldier
+     * @apiDescription  Insert a new soldiers
+     * @apiGroup        Soldiers
+     * @apiPermission   none
+     * @apiVersion      1.0.0
+     *
+     * @apiParam        {String}  Voornaam                 The firstname of the soldier.
+     * @apiParam        {String}  Achternaam               The lastname of the soldier.
+     *
+     *
+     * @apiExample Usage (example):
+     * curl -i -d 'Param=Value&Param=Value' http://www.domain.com/soldiers/insert/22
      */
-    public function delete() {
+    public function insert() {
+      $Soldiers             = new Soldaten;
+      $Soldiers->Voornaam   = Request::get('Voornaam');
+      $Soldiers->Achternaam = Request::get('Achternaam');
+      $Soldiers->save();
+
+      return
+
+    }
+
+    /**
+     * @api             {delete} /soldiers/{id} Delete a specific soldier.
+     * @apiname         delete
+     * @apiDescription  Delete a specific soldier
+     * @apiGroup        Soldiers
+     * @apiPermission   none
+     * @apiVersion      1.0.0
+     *
+     * @apiParam        {String}  id                 The api off the soldier.
+     *
+     *
+     * @apiExample Usage (example):
+     * curl -i http://www.domain.com/soldiers/delete/22
+     */
+    public function delete($id) {
       $soldiers = Soldaten::find($id);
       $soldiers->delete();
 

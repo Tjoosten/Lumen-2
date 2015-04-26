@@ -208,7 +208,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Error response:",
-          "content": "HTTP/1.1 401 Not Authenticated\n{\n  \"error\": true,\n  \"message\": \"No graveyard found\".\n}",
+          "content": "HTTP/1.1 4xx Not Authenticated\n{\n  \"error\": true,\n  \"message\": \"No graveyard found\".\n}",
           "type": "json"
         }
       ],
@@ -275,6 +275,147 @@ define({ "api": [
     "groupTitle": "Middleware_"
   },
   {
+    "type": "post",
+    "url": "/regiments/insert",
+    "title": "Insert a new regiment.",
+    "name": "Insert_a_new_regiment",
+    "description": "<p>Insert new regiment.</p> ",
+    "group": "Regiments",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiRegiments.php",
+    "groupTitle": "Regiments"
+  },
+  {
+    "type": "delete",
+    "url": "/regiments/delete/{id}",
+    "title": "Delete a regiment.",
+    "name": "deleteRegiments",
+    "description": "<p>Delete a regiment</p> ",
+    "group": "Regiments",
+    "permission": [
+      {
+        "name": "None"
+      }
+    ],
+    "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example)",
+        "content": "curl -i http://www.domain.com/regiments/delete/22",
+        "type": "json"
+      }
+    ],
+    "filename": "API-source-code/app/Http/Controllers/ApiRegiments.php",
+    "groupTitle": "Regiments"
+  },
+  {
+    "type": "get",
+    "url": "/regiments/{id}",
+    "title": "get a specific regiments.",
+    "name": "regiments__specific_",
+    "description": "<p>Get a specific regiment.</p> ",
+    "group": "Regiments",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/regiments/22",
+        "type": "json"
+      }
+    ],
+    "filename": "API-source-code/app/Http/Controllers/ApiRegiments.php",
+    "groupTitle": "Regiments"
+  },
+  {
+    "type": "post",
+    "url": "/soldiers/{id}",
+    "title": "Insert a new soldier.",
+    "name": "InsertSoldier",
+    "description": "<p>Insert a new soldiers</p> ",
+    "group": "Soldiers",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Voornaam",
+            "description": "<p>The firstname of the soldier.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Achternaam",
+            "description": "<p>The lastname of the soldier.</p> "
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i -d 'Param=Value&Param=Value' http://www.domain.com/soldiers/insert/22",
+        "type": "json"
+      }
+    ],
+    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
+    "groupTitle": "Soldiers"
+  },
+  {
+    "type": "delete",
+    "url": "/soldiers/{id}",
+    "title": "Delete a specific soldier.",
+    "name": "delete",
+    "description": "<p>Delete a specific soldier</p> ",
+    "group": "Soldiers",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>The api off the soldier.</p> "
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/soldiers/delete/22",
+        "type": "json"
+      }
+    ],
+    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
+    "groupTitle": "Soldiers"
+  },
+  {
     "type": "get",
     "url": "/soldiers/{id}",
     "title": "get a specific soldier.",
@@ -300,6 +441,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/soldiers/22",
+        "type": "json"
+      }
+    ],
     "success": {
       "fields": {
         "Success 200": [
@@ -510,6 +658,13 @@ define({ "api": [
       }
     ],
     "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example):",
+        "content": "curl -i http://www.domain.com/soldiers/all",
+        "type": "json"
+      }
+    ],
     "success": {
       "fields": {
         "Success 200": [

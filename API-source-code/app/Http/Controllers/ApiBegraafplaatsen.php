@@ -68,7 +68,7 @@
      * curl -i http://www.domain.com/graveyard/33
      *
      *  @apiErrorExample Error response:
-     *     HTTP/1.1 401 Not Authenticated
+     *     HTTP/1.1 4xx Not Authenticated
      *     {
      *       "error": true,
      *       "message": "No graveyard found".
