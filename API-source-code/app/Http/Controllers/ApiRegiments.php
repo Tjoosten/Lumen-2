@@ -7,7 +7,6 @@
   use League\Fractal\Resource\Collection;
   use League\Fractal\Pagination\Cursor;
   use Illuminate\Http\Response;
-  use Validator;
   use Request;
 
   Class ApiRegiments extends CallbackRegiments {
@@ -65,7 +64,7 @@
      * @apiVersion      1.0.0
      */
     public function insertRegiment() {
-
+      
     }
 
     /**
@@ -79,7 +78,7 @@
      * @apiExample Usage (example)
      * curl -i http://www.domain.com/regiments/delete/22
      */
-    public function deleteRegiments() {
+    public function deleteRegiments($id) {
 
     }
 
