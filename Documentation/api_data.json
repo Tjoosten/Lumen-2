@@ -291,6 +291,22 @@
     "groupTitle": "Regiments"
   },
   {
+    "type": "patch",
+    "url": "/regiments/patch/{id}",
+    "title": "Update",
+    "name": "Update_a_regiment",
+    "description": "<p>Update a regiment</p> ",
+    "group": "Regiments",
+    "permission": [
+      {
+        "name": "Admin"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiRegiments.php",
+    "groupTitle": "Regiments"
+  },
+  {
     "type": "delete",
     "url": "/regiments/delete/{id}",
     "title": "Delete a regiment.",

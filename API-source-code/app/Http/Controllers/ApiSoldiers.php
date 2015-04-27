@@ -168,6 +168,7 @@
       $Soldiers->Achternaam = Request::get('Achternaam');
       $Soldiers->save();
 
+
       return
 
     }
@@ -196,4 +197,15 @@
       ], 200)->header('Content-Type', 'application/json');
     }
 
+    /**
+     * @api             {patch} /soldiers/update/{id} Update a soldier.
+     * @apiName         update
+     * @apiDescription  Update a soldier
+     * @apiGroup        Soldiers
+     * apiPermission    Admin
+     * @apiVersion      1.0.0
+     */
+    public function updateSoldier() {$id
+
+    }
   }
