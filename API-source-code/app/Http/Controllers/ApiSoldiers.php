@@ -191,6 +191,14 @@
       $soldiers = Soldaten::find($id);
       $soldiers->delete();
 
+      switch(count($soldiers->count())) {
+        case '1':
+        break;
+
+        case '0':
+        break;
+      }
+
       return response()->json([
         'error'   => false,
         'soldier' => 'Soldier deleted',
