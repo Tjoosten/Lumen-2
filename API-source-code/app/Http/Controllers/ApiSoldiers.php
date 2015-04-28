@@ -183,7 +183,6 @@
      *
      * @apiParam        {String}  id                 The api off the soldier.
      *
-     *
      * @apiExample Usage (example):
      * curl -i http://www.domain.com/soldiers/delete/22
      */
@@ -193,16 +192,22 @@
 
       switch(count($soldiers->count())) {
         case '1':
+          $mime    = 'application/json';
+          $status  = 200;
+          $content = ['message' =>'Soldier deleted'];
         break;
 
         case '0':
+          $mime    = 'application/json';
+          $status  = 400;
+          $content = ['messsage' => 'Could not perform the action'];
         break;
       }
 
-      return response()->json([
-        'error'   => false,
-        'soldier' => 'Soldier deleted',
-      ], 200)->header('Content-Type', 'application/json');
+      $response = response($content, $status);
+      $response->header('Content-Type', $mime);
+
+      return $response;
     }
 
     /**
@@ -213,7 +218,7 @@
      * apiPermission    Admin
      * @apiVersion      1.0.0
      */
-    public function updateSoldier() {$id
+    public function updateSoldier($id) {
 
     }
   }
