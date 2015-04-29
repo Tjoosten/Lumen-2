@@ -167,9 +167,22 @@
       $Soldiers->Voornaam   = Request::get('Voornaam');
       $Soldiers->Achternaam = Request::get('Achternaam');
       $Soldiers->save();
+      $Soldiers->count();
 
+      if(count($Soldiers->count()) === 0) {
+        $mime    = 'application/json';
+        $status  = 200; // Successfull Request.
+        $content = ['message' => 'Could not add the soldier.'];
+      } elseif(count($Soldiers->count()) > 0) {
+        $mime    = 'application/json';
+        $status  = 400; // Bad Request
+        $content = ['message' => 'Soldier successfull added.'];
+      }
 
-      return
+      $response = response($content, $status);
+      $response->header($mime);
+
+      return $response;
 
     }
 
@@ -219,6 +232,14 @@
      * @apiVersion      1.0.0
      */
     public function updateSoldier($id) {
+      $Soldier = Soldaten::where('id', $id)->get();
+      $Soldier->save();
+
+      if(count($soldiers->count()) === 0) {
+
+      } elseif() {
+
+      }
 
     }
   }
