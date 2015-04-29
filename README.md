@@ -2,6 +2,7 @@
 
 [![Join the chat at https://gitter.im/Tjoosten/Lumen-2](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Tjoosten/Lumen-2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/Tjoosten/Lumen-2.svg?branch=master)](https://travis-ci.org/Tjoosten/Lumen-2)
+https://david-dm.org/username/repo.svg
 
 Lumen API is een gebouwd op het Lumen framework van laravel.
 
