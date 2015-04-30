@@ -18,6 +18,12 @@ class Zeelieden extends Migration {
             $table->string('Voornaam', 255);
             $table->string('Geslacht', 45);
             $table->string('Graad', 255);
+            $table->string('Schip', 255);
+            $table->string('Geboren_plaats', 255);
+            $table->string('Geboren_datum', 255);
+            $table->string('Overleden_plaats', 255);
+            $table->string('Overleden_datum', 255);
+            $table->string('Woonplaats', 255);
             $table->timestamps();
         });
 	}
