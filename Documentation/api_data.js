@@ -142,99 +142,6 @@ define({ "api": [
     "groupTitle": "Exception_handler"
   },
   {
-    "type": "get",
-    "url": "/graveyards/all",
-    "title": "get all the graveyards.",
-    "name": "graveyards__all_",
-    "description": "<p>Get a all the graveyards.</p> ",
-    "group": "Graveyards",
-    "permission": [
-      {
-        "name": "none"
-      }
-    ],
-    "version": "1.0.0",
-    "examples": [
-      {
-        "title": "Usage (example):",
-        "content": "curl -i http://www.domain.com/graveyards/all",
-        "type": "json"
-      }
-    ],
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "type": "Boolean",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Error detection.</p> "
-          },
-          {
-            "group": "Error 4xx",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Error Message.</p> "
-          }
-        ]
-      }
-    },
-    "filename": "API-source-code/app/Http/Controllers/ApiBegraafplaatsen.php",
-    "groupTitle": "Graveyards"
-  },
-  {
-    "type": "get",
-    "url": "/graveyard/{id}",
-    "title": "get a specific graveyard.",
-    "name": "graveyards__specific_",
-    "description": "<p>Get a specific graveyard.</p> ",
-    "group": "Graveyards",
-    "permission": [
-      {
-        "name": "none"
-      }
-    ],
-    "version": "1.0.0",
-    "examples": [
-      {
-        "title": "Usage (example):",
-        "content": "curl -i http://www.domain.com/graveyard/33",
-        "type": "json"
-      }
-    ],
-    "error": {
-      "examples": [
-        {
-          "title": "Error response:",
-          "content": "HTTP/1.1 4xx Not Authenticated\n{\n  \"error\": true,\n  \"message\": \"No graveyard found\".\n}",
-          "type": "json"
-        }
-      ],
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "type": "Boolean",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Error detection.</p> "
-          },
-          {
-            "group": "Error 4xx",
-            "type": "String",
-            "optional": false,
-            "field": "message",
-            "description": "<p>Error Message.</p> "
-          }
-        ]
-      }
-    },
-    "filename": "API-source-code/app/Http/Controllers/ApiBegraafplaatsen.php",
-    "groupTitle": "Graveyards"
-  },
-  {
     "name": "handle",
     "description": "<p>Handle an incoming request..</p> ",
     "group": "Middleware_",
@@ -394,6 +301,37 @@ define({ "api": [
     ],
     "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
     "groupTitle": "Soldiers"
+  },
+  {
+    "type": "patch",
+    "url": "/soldiers/update/{id}",
+    "title": "Update a soldier.",
+    "name": "update",
+    "description": "<p>Update a soldier</p> ",
+    "group": "Soldiers_apiPermission_Admin",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Voornaam",
+            "description": "<p>The soldier his firstname?</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Achternaam",
+            "description": "<p>The soldier his lastname.</p> "
+          }
+        ]
+      }
+    },
+    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
+    "groupTitle": "Soldiers_apiPermission_Admin"
   },
   {
     "type": "delete",

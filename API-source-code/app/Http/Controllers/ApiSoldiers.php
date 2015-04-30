@@ -230,14 +230,19 @@
      * @apiGroup        Soldiers
      * apiPermission    Admin
      * @apiVersion      1.0.0
+     *
+     * @apiParam        {String}  Voornaam         The soldier his firstname?
+     * @apiParam        {String}  Achternaam       The soldier his lastname.
      */
     public function updateSoldier($id) {
       $Soldier = Soldaten::where('id', $id)->get();
+      $Soldier->Voornaam   = Request::get('Voornaam');
+      $Soldier->Achternaam = Request::get('Achternaam');
       $Soldier->save();
 
-      if(count($soldiers->count()) === 0) {
+      if(count($Soldier->count()) === 0) {
 
-      } elseif() {
+      } elseif(count($Soldier->count()) > 0) {
 
       }
 
