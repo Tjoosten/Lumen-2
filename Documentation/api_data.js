@@ -238,6 +238,29 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/regiments/all",
+    "title": "get all the regiments.",
+    "name": "regiments__all_",
+    "description": "<p>Get all the regiments.</p> ",
+    "group": "Regiments",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "examples": [
+      {
+        "title": "Usage (example)",
+        "content": "curl -i http://www.domain.com/regiments/all",
+        "type": "json"
+      }
+    ],
+    "filename": "API-source-code/app/Http/Controllers/ApiRegiments.php",
+    "groupTitle": "Regiments"
+  },
+  {
+    "type": "get",
     "url": "/regiments/{id}",
     "title": "get a specific regiments.",
     "name": "regiments__specific_",
@@ -301,6 +324,34 @@ define({ "api": [
     ],
     "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
     "groupTitle": "Soldiers"
+  },
+  {
+    "type": "patch",
+    "url": "/soldiers/update/{id}",
+    "title": "Update a soldier.",
+    "group": "Soldiers",
+    "permission": [
+      {
+        "name": "Admin"
+      }
+    ],
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p>The Soldier his idea</p> "
+          }
+        ]
+      }
+    },
+    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
+    "groupTitle": "Soldiers",
+    "name": "PatchSoldiersUpdateId"
   },
   {
     "type": "delete",

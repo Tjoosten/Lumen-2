@@ -1,20 +1,22 @@
 <?php
 
-  namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
-  use App\Models\Soldaten;
-  use League\Fractal\Manager;
-  use League\Fractal\Resource\Collection;
-  use League\Fractal\Pagination\Cursor;
-  use Illuminate\Http\Response;
-  use Request;
+use App\Models\Soldaten;
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Pagination\Cursor;
+use Illuminate\Http\Response;
+use Request;
 
-  class ApiSoldiers extends CallbackSoldier {
+class ApiSoldiers extends CallbackSoldier
+{
 
     private $fractal;
 
-    public function __construct() {
-      $this->fractal = new Manager();
+    public function __construct()
+    {
+        $this->fractal = new Manager();
     }
 
     /**
@@ -56,28 +58,29 @@
      * @apiError        {Boolean} error              Error detectation.
      * @apiError        {String}  message            The error message.
      */
-    public function getSoldiers() {
-      if ($currentCursorStr = Request::input('cursor', false)) {
-        $Soldaten = Soldaten::with('begraafplaats', 'regiment')->where('id', '>', $currentCursorStr)->take(5)->get();
-      } else {
-        $Soldaten = Soldaten::with('begraafplaats', 'regiment')->take(5)->get();
-      }
+    public function getSoldiers()
+    {
+        if ($currentCursorStr = Request::input('cursor', false)) {
+            $Soldaten = Soldaten::with('begraafplaats', 'regiment')->where('id', '>', $currentCursorStr)->take(5)->get();
+        } else {
+            $Soldaten = Soldaten::with('begraafplaats', 'regiment')->take(5)->get();
+        }
 
-      $prevCursorStr = Request::input('prevCursor', 6);
-      $newCursorStr  = $Soldaten->last()->id;
-      $cursor        = new Cursor($currentCursorStr, $prevCursorStr, $newCursorStr, $Soldaten->count());
+        $prevCursorStr = Request::input('prevCursor', 6);
+        $newCursorStr = $Soldaten->last()->id;
+        $cursor = new Cursor($currentCursorStr, $prevCursorStr, $newCursorStr, $Soldaten->count());
 
-      $resource = new Collection($Soldaten, $this->transformSoldierCallback());
-      $resource->setCursor($cursor);
+        $resource = new Collection($Soldaten, $this->transformSoldierCallback());
+        $resource->setCursor($cursor);
 
-      $content = $this->fractal->createData($resource)->toJson();
-      $status  = 200;
-      $mime    = 'application/json';
+        $content = $this->fractal->createData($resource)->toJson();
+        $status = 200;
+        $mime = 'application/json';
 
-      $response = response($content, $status);
-      $response->header('Content-Type', $mime);
+        $response = response($content, $status);
+        $response->header('Content-Type', $mime);
 
-      return $response;
+        return $response;
     }
 
     /**
@@ -122,29 +125,56 @@
      * @apiError        {Boolean} error              Error detectation.
      * @apiError        {String}  message            The error message.
      */
-    public function getSoldier($id) {
-      $Soldaat       = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
-      $outputLayout  = new Collection($Soldaat, $this->transformSoldierCallback());
+    public function getSoldier($id)
+    {
+        $Soldaat = Soldaten::with('begraafplaats', 'regiment')->where('id', $id)->get();
+        $outputLayout = new Collection($Soldaat, $this->transformSoldierCallback());
 
 
-      if(count($Soldaat) === 0) {
-        $content = $this->transformNoSoldiers();
-        $status  = 200;
-        $mime    = 'application/json';
-      } else {
-        $content = $this->fractal->createData($outputLayout)->toJson();
-        $status  = 200;
-        $mime    = 'application/json';
-      }
+        if (count($Soldaat) === 0) {
+            $content = $this->transformNoSoldiers();
+            $status = 200;
+            $mime = 'application/json';
+        } else {
+            $content = $this->fractal->createData($outputLayout)->toJson();
+            $status = 200;
+            $mime = 'application/json';
+        }
 
-      $response = response($content, $status);
-      $response->header('Content-Type', $mime);
+        $response = response($content, $status);
+        $response->header('Content-Type', $mime);
 
-      return $response;
+        return $response;
     }
 
-    public function update() {
+    /**
+     * @api            {patch} /soldiers/update/{id} Update a soldier.
+     * @piName         Update
+     * @apiGroup       Soldiers
+     * @apiPermission  Admin
+     * @apiVersion     1.0.0
+     *
+     * @apiParam       {Integer}  id                       The Soldier his idea
+     */
+    public function update($id)
+    {
+        $Soldier = Soldaten::find($id);
+        $Soldier->save();
 
+        if($Soldier->count() === 0) {
+            $mime    = 'application/json';
+            $status  = 200; //Successfull request;
+            $content = [ 'message' => 'Could not update the soldier' ];
+        } elseif($Soldier->count() > 0) {
+            $mime    = 'application/json';
+            $status  = 200; // Successfull request.
+            $content = [ 'message' => 'Soldier is updated' ];
+        }
+
+        $response = response($content, $status);
+        $response->header($mime);
+
+        return $response;
     }
 
     /**
@@ -162,27 +192,28 @@
      * @apiExample Usage (example):
      * curl -i -d 'Param=Value&Param=Value' http://www.domain.com/soldiers/insert/22
      */
-    public function insert() {
-      $Soldiers             = new Soldaten;
-      $Soldiers->Voornaam   = Request::get('Voornaam');
-      $Soldiers->Achternaam = Request::get('Achternaam');
-      $Soldiers->save();
-      $Soldiers->count();
+    public function insert()
+    {
+        $Soldiers = new Soldaten;
+        $Soldiers->Voornaam = Request::get('Voornaam');
+        $Soldiers->Achternaam = Request::get('Achternaam');
+        $Soldiers->save();
+        $Soldiers->count();
 
-      if(count($Soldiers->count()) === 0) {
-        $mime    = 'application/json';
-        $status  = 200; // Successfull Request.
-        $content = ['message' => 'Could not add the soldier.'];
-      } elseif(count($Soldiers->count()) > 0) {
-        $mime    = 'application/json';
-        $status  = 400; // Bad Request
-        $content = ['message' => 'Soldier successfull added.'];
-      }
+        if (count($Soldiers->count()) === 0) {
+            $mime = 'application/json';
+            $status = 200; // Successfull Request.
+            $content = ['message' => 'Could not add the soldier.'];
+        } elseif (count($Soldiers->count()) > 0) {
+            $mime = 'application/json';
+            $status = 400; // Bad Request
+            $content = ['message' => 'Soldier successfull added.'];
+        }
 
-      $response = response($content, $status);
-      $response->header($mime);
+        $response = response($content, $status);
+        $response->header($mime);
 
-      return $response;
+        return $response;
 
     }
 
@@ -199,28 +230,29 @@
      * @apiExample Usage (example):
      * curl -i http://www.domain.com/soldiers/delete/22
      */
-    public function delete($id) {
-      $soldiers = Soldaten::find($id);
-      $soldiers->delete();
+    public function delete($id)
+    {
+        $soldiers = Soldaten::find($id);
+        $soldiers->delete();
 
-      switch(count($soldiers->count())) {
-        case '1':
-          $mime    = 'application/json';
-          $status  = 200;
-          $content = ['message' =>'Soldier deleted'];
-        break;
+        switch (count($soldiers->count())) {
+            case '1':
+                $mime = 'application/json';
+                $status = 200;
+                $content = ['message' => 'Soldier deleted'];
+                break
 
         case '0':
-          $mime    = 'application/json';
-          $status  = 400;
-          $content = ['messsage' => 'Could not perform the action'];
-        break;
+            $mime = 'application/json';
+            $status = 400;
+            $content = ['messsage' => 'Could not perform the action'];
+            break
       }
 
-      $response = response($content, $status);
-      $response->header('Content-Type', $mime);
+        $response = response($content, $status);
+        $response->header('Content-Type', $mime);
 
-      return $response;
+        return $response;
     }
 
     /**
@@ -234,17 +266,23 @@
      * @apiParam        {String}  Voornaam         The soldier his firstname?
      * @apiParam        {String}  Achternaam       The soldier his lastname.
      */
-    public function updateSoldier($id) {
-      $Soldier = Soldaten::where('id', $id)->get();
-      $Soldier->Voornaam   = Request::get('Voornaam');
-      $Soldier->Achternaam = Request::get('Achternaam');
-      $Soldier->save();
+    public function updateSoldier($id)
+    {
+        $Soldier = Soldaten::where('id', $id)->get();
+        $Soldier->Voornaam = Request::get('Voornaam');
+        $Soldier->Achternaam = Request::get('Achternaam');
+        $Soldier->save();
 
-      if(count($Soldier->count()) === 0) {
+        if ($Soldier->count() === 0) {
+            $mime = 'application/json';
+            $status = 200; // Successfull request.
+        } elseif ($Soldier->count() > 0) {
+            $mime = 'application/json';
+        }
 
-      } elseif(count($Soldier->count()) > 0) {
+        $response = response($content, $status);
+        $response->header($mime);
 
-      }
-
+        return $response;
     }
-  }
+}
