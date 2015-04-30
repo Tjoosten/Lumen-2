@@ -12,7 +12,14 @@ class Zeelieden extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('Zeelieden', function(Blueprint $table) {
+            $table->increments(id);
+            $table->string('Achternaam', 255);
+            $table->string('Voornaam', 255);
+            $table->string('Geslacht', 45);
+            $table->string('Graad', 255);
+            $table->timestamps();
+        });
 	}
 
 	/**
@@ -22,7 +29,7 @@ class Zeelieden extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('Zeelieden');
 	}
 
 }
