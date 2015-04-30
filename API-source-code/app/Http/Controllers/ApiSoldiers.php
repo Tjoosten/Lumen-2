@@ -228,7 +228,7 @@
      * @apiName         update
      * @apiDescription  Update a soldier
      * @apiGroup        Soldiers
-     * apiPermission    Admin
+     * @apiPermission    Admin
      * @apiVersion      1.0.0
      *
      * @apiParam        {String}  Voornaam         The soldier his firstname?

@@ -303,37 +303,6 @@
     "groupTitle": "Soldiers"
   },
   {
-    "type": "patch",
-    "url": "/soldiers/update/{id}",
-    "title": "Update a soldier.",
-    "name": "update",
-    "description": "<p>Update a soldier</p> ",
-    "group": "Soldiers_apiPermission_Admin",
-    "version": "1.0.0",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "Voornaam",
-            "description": "<p>The soldier his firstname?</p> "
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "Achternaam",
-            "description": "<p>The soldier his lastname.</p> "
-          }
-        ]
-      }
-    },
-    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
-    "groupTitle": "Soldiers_apiPermission_Admin"
-  },
-  {
     "type": "delete",
     "url": "/soldiers/{id}",
     "title": "Delete a specific soldier.",
@@ -809,6 +778,42 @@
             "optional": false,
             "field": "message",
             "description": "<p>The error message.</p> "
+          }
+        ]
+      }
+    },
+    "filename": "API-source-code/app/Http/Controllers/ApiSoldiers.php",
+    "groupTitle": "Soldiers"
+  },
+  {
+    "type": "patch",
+    "url": "/soldiers/update/{id}",
+    "title": "Update a soldier.",
+    "name": "update",
+    "description": "<p>Update a soldier</p> ",
+    "group": "Soldiers",
+    "permission": [
+      {
+        "name": "Admin"
+      }
+    ],
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Voornaam",
+            "description": "<p>The soldier his firstname?</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Achternaam",
+            "description": "<p>The soldier his lastname.</p> "
           }
         ]
       }
