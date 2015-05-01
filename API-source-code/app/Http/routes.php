@@ -27,24 +27,24 @@ $app->get('/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards
 $app->get('/graveyards/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@graveyard');
 $app->put('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@InsertGraveyard'); // Insert
 $app->patch('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@Updategraveyard'); // Update
-$app->delete('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@'): // Delete
+//$app->delete('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@'): // Delete
 // ------------------------------------------------------------------------------------
 
 // Routes for Civilians
-$app->get('', '');
-$app->get('', '');
+// $app->get('', '');
+// $app->get('', '');
 
 // Routes for sailors.
-$app->get('', '');
-$app->get('', '');
+// $app->get('', '');
+// $app->get('', '');
 
 // Routes for political prinsoners.
-$app->get('', '');
-$app->get('', '');
+// $app->get('', '');
+// $app->get('', '');
 
 // Routes for resistance fighters.
-$app->get('', '');
-$app->get('', '');
+// $app->get('', '');
+// $app->get('', '');
 
 // Routes for regiments.
 $app->get('/regiments/all', 'App\Http\Controllers\ApiRegiments@regiments');

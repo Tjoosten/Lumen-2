@@ -268,13 +268,13 @@ class ApiSoldiers extends CallbackSoldier
                 $mime = 'application/json';
                 $status = 200;
                 $content = ['message' => 'Soldier deleted'];
-                break
+                break;
 
         case '0':
             $mime = 'application/json';
             $status = 400;
             $content = ['messsage' => 'Could not perform the action'];
-            break
+            break;
       }
 
         $response = response($content, $status);

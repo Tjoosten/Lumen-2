@@ -82,17 +82,17 @@ Class ApiRegiments extends CallbackRegiments
         $regiment->save();
         $regiment->count();
 
-        switch (count($regiment)) {
+        switch ($regiment->count()) {
             case '1':
                 $status = 200; // Successfull request
                 $mime = 'application/json';
-                $content =
+                $content = [ 'message' => 'successfull added the regiment.' ];
         break;
 
             case '0':
                 $status = 400; // Bad request
                 $mime = 'application/json';
-                $content =
+                $content = [ 'message' => 'Could not add the regiment.' ];
         break;
         }
 
@@ -115,7 +115,21 @@ Class ApiRegiments extends CallbackRegiments
         $regiment = Divisie::where('id', '=', $id);
         $regiment->Regiment = Request::get('Regiment'):
         $regiment->save();
-        $regiment->count();
+
+        if ($regiment->count() === 0) {
+            $mime    = 'application/json';
+            $status  = 200; // Successfull request.
+            $content = [ 'message' => 'Could not update the regiment' ];
+        } elseif($regiment->count()) {
+            $mime    = 'application/json';
+            $status  = 400; // BAd request.
+            $content = [ 'message' => 'Regiment successfull updated' ];
+        }
+
+        $response = response($content, $mime);
+        $response->header($mime);
+
+
     }
 
     /**
