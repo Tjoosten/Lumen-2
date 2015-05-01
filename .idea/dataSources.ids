@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - timjoot143_FallenSoldiers@185.13.227.159" uuid="273873eb-523d-4e25-a3c8-4480b7bedee3">
+    <database-info product="MySQL" version="5.5.31" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="timjoot143_FallenSoldiers"/>
+    <table name="Begraafplaatsen" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Begraafplaats" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Lengtegraad" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Breedtegraad" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="Burgerslachtoffers" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="BID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Voornaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Achternaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Burgerlijke_stand" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Geboren_plaats" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Geboren_datum" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Leeftijd" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geslacht" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Beroep" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Werkgever" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_plaats" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_datum" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_locatie" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="Doodsoorzaak" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Woonplaats_straat" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Woonplaats_gemeente" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="HerdenkingID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="Ng=="/>
+      <column name="Foto" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="BID"/>
+    </table>
+    <table name="Gesneuvelde" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Voornaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J05pZXQgZ2VrZW5kJw=="/>
+      <column name="Achternaam" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="J05pZXQgZ2VrZW5kJw=="/>
+      <column name="Burgerlijke_stand" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Stam_nr" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="regiment_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MTU="/>
+      <column name="Geboren_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geboren_plaats" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_locatie" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Overleden_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_plaats" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Doodsoorzaak" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="herdenking_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="Ng=="/>
+      <column name="Added" sqlType="VARCHAR" precision="70" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geslacht" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Eenheid" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J05pZXQgYmVrZW5kJw=="/>
+      <column name="Rang" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Graf_referentie" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" def="J09uYmVrZW5kJw=="/>
+      <column name="Dienst" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Notitie" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="Herdenkings_monumenten" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="HID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Monument" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Type" sqlType="VARCHAR" precision="125" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="HID"/>
+    </table>
+    <table name="Politieke_gevangenen" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="PG_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Voornaam" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Achternaam" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geslacht" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Oorlogs_jaren" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geboorte_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overlijden datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Begraafplaats_ID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="PG_ID"/>
+    </table>
+    <table name="Regimenten" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Regiment" sqlType="VARCHAR" precision="450" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Added" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="Verzet_strijders" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="VSID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Voornaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Achternaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Stam_nr" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geslacht" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Oorlogs_jaren" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Groepering" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geboorte_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overlijden_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Bron" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="BID" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="VSID"/>
+      <index name="Stam_nr_UNIQUE" unique="true" columns="Stam_nr"/>
+    </table>
+    <table name="Zeelieden" schema="" catalog="timjoot143_FallenSoldiers" type="TABLE">
+      <column name="ZLID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Achternaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Voornaam" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geslacht" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Graad" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Schip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geboren_plaats" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Geboren_datum" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_plaats" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Overleden_Datum" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Woonplaats" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="ZLID"/>
+    </table>
+  </data-source>
+</component>

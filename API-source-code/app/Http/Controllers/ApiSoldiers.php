@@ -185,9 +185,23 @@ class ApiSoldiers extends CallbackSoldier
      * @apiPermission   none
      * @apiVersion      1.0.0
      *
-     * @apiParam        {String}  Voornaam                 The firstname of the soldier.
-     * @apiParam        {String}  Achternaam               The lastname of the soldier.
-     *
+     * @apiParam        {String}   Voornaam                 The firstname of the soldier.
+     * @apiParam        {String}   Achternaam               The lastname of the soldier.
+     * @apiParam        {String}   Stam_nr                  The service number.
+     * @apiParam        {Integer}  Regiment                 The id of the regiment.
+     * @apiParam        {String}   GeborenPlaats            The birth place.
+     * @apiParam        {String}   GeborenDatum             The date of birth.
+     * @apiParam        {String}   OverledenLocatie         The exact location of death.
+     * @apiParam        {String}   OverledenDatum           The date of death.
+     * @apiParam        {String}   OverledenPlaats          The city where the soldier died
+     * @apiParam        {String}   Doodsoorzaak             The Cause of death.
+     * @aoiParam        {Integer}  Herdenking               The graveyard id.
+     * @apiParam        {String}   Geslacht                 The gender of the soldier.
+     * @apiParam        {String}   Eenheid                  The land they serve.
+     * @apiParam        {String}   Rang                     The rank of the soldier.
+     * @apiParam        {String}   Graf_referentie          The grave number on the graveyard.
+     * @apiParam        {String}   Dienst                   The Service years of the soldiers.
+     * @apiParam        {String}   Notitie                  Extra notation of the soldier.
      *
      * @apiExample Usage (example):
      * curl -i -d 'Param=Value&Param=Value' http://www.domain.com/soldiers/insert/22
@@ -195,15 +209,30 @@ class ApiSoldiers extends CallbackSoldier
     public function insert()
     {
         $Soldiers = new Soldaten;
-        $Soldiers->Voornaam   = Request::get('Voornaam');
-        $Soldiers->Achternaam = Request::get('Achternaam');
+        $Soldiers->Voornaam           = Request::get('Voornaam');
+        $Soldiers->Achternaam         = Request::get('Achternaam');
+        $Soldiers->Burgerlijke_stand  = Request::get('Stam_nr');
+        $Soldiers->regiment_id        = Request::get('Regiment');
+        $Soldiers->Geboren_datum      = Request::get('GeborenDatum');
+        $Soldiers->Geboren_plaats     = Request::get('GeborenPlaats');
+        $Soldiers->Overleden_locatie  = Request::get('OverledenLocatie');
+        $Soldiers->Overleden_datum    = Request::get('OverledenDatum');
+        $Soldiers->Overleden_plaats   = Request::get('OverledenPlaats');
+        $Soldiers->Doodsoorzaak       = Request::get('Doodsoorzaak');
+        $Soldiers->herdenking_id      = Request::get('Herdenking');
+        $Soldiers->Geslacht           = Request::get('Geslacht');
+        $Soldiers->Eenheid            = Request::get('Eenheid');
+        $Soldiers->Rang               = Request::get('Rang');
+        $Soldiers->Graf_referentie    = Request::get('Graf_referentie');
+        $Soldiers->Dienst             = Request::get('Dienst');
+        $Soldiers->Notitie            = Request::get('Notitie');
         $Soldiers->save();
 
-        if (count($Soldiers->count()) === 0) {
+        if ($Soldiers->count() === 0) {
             $mime = 'application/json';
             $status = 200; // Successfull Request.
             $content = ['message' => 'Could not add the soldier.'];
-        } elseif (count($Soldiers->count()) > 0) {
+        } elseif ($Soldiers->count() > 0) {
             $mime = 'application/json';
             $status = 400; // Bad Request
             $content = ['message' => 'Soldier successfull added.'];
