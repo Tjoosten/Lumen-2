@@ -19,9 +19,16 @@ $app->get('/soldiers/all', 'App\Http\Controllers\ApiSoldiers@getSoldiers');
 $app->get('/soldiers/{id}', 'App\Http\Controllers\ApiSoldiers@getSoldier');
 $app->post('/soldiers/insert', 'App\Http\Controllers\ApiSoldiers@insert');
 
-// Routes for graveyards?.
+// ------------------------------------------------------------------------------------
+// ROUTE: graveyards
+// ------------------------------------------------------------------------------------
 $app->get('/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards');
+
 $app->get('/graveyards/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@graveyard');
+$app->put('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@InsertGraveyard'); // Insert
+$app->patch('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@Updategraveyard'); // Update
+$app->delete('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@'): // Delete
+// ------------------------------------------------------------------------------------
 
 // Routes for Civilians
 $app->get('', '');

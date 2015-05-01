@@ -195,10 +195,9 @@ class ApiSoldiers extends CallbackSoldier
     public function insert()
     {
         $Soldiers = new Soldaten;
-        $Soldiers->Voornaam = Request::get('Voornaam');
+        $Soldiers->Voornaam   = Request::get('Voornaam');
         $Soldiers->Achternaam = Request::get('Achternaam');
         $Soldiers->save();
-        $Soldiers->count();
 
         if (count($Soldiers->count()) === 0) {
             $mime = 'application/json';
