@@ -6,6 +6,7 @@
 [![Build Status](https://travis-ci.org/Tjoosten/Lumen-2.svg?branch=master)](https://travis-ci.org/Tjoosten/Lumen-2)
 [![devDependency Status](https://img.shields.io/david/dev/Tjoosten/lumen-2.svg?style=flat)](https://david-dm.org/Tjoosten/lumen-2#info=devDependencies)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/13d9c0fa-d01e-452c-88dd-b95a8debe9a3/mini.png)](https://insight.sensiolabs.com/projects/13d9c0fa-d01e-452c-88dd-b95a8debe9a3)
+[![Gittip](http://img.shields.io/gratipay/Tjoosten.svg)](https://www.gittip.com/Tjoosten/)
 
 Lumen API is een gebouwd op het Lumen framework van laravel.
 

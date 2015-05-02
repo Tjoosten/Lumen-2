@@ -283,6 +283,141 @@ define({ "api": [
     "groupTitle": "Regiments"
   },
   {
+    "type": "delete",
+    "url": "/sailors/delete/{id}",
+    "title": "Delete a sailor",
+    "name": "deleteSoldier__",
+    "description": "<p>Delete a soldier</p> ",
+    "group": "Sailors",
+    "permission": [
+      {
+        "name": "Admin"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiSailors.php",
+    "groupTitle": "Sailors"
+  },
+  {
+    "type": "get",
+    "url": "/sailor/{id}",
+    "title": "Get a specific sailor",
+    "name": "getSailor",
+    "description": "<p>Get a specific sailor.</p> ",
+    "group": "Sailors",
+    "permission": [
+      {
+        "name": "None"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiSailors.php",
+    "groupTitle": "Sailors"
+  },
+  {
+    "type": "get",
+    "url": "/sailors/all",
+    "title": "Get all the sailors",
+    "name": "getSailors__",
+    "description": "<p>Get all the sailors.</p> ",
+    "group": "Sailors",
+    "permission": [
+      {
+        "name": "None"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiSailors.php",
+    "groupTitle": "Sailors"
+  },
+  {
+    "type": "post",
+    "url": "/sailors/insert",
+    "title": "Insert new saolor",
+    "name": "insertSailor",
+    "description": "<p>Insert a new sailor</p> ",
+    "group": "Sailors",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Achternaam",
+            "description": "<p>The sailor his lastname.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Voornaam",
+            "description": "<p>The sailor his firstname.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Geslacht",
+            "description": "<p>The gender of the sailor.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Graad",
+            "description": "<p>The rank on the ship.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Schip",
+            "description": "<p>The ship they working on.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "GeborenPlaats",
+            "description": "<p>Place of birth.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "GeborenDatum",
+            "description": "<p>Date of birth.</p> "
+          }
+        ]
+      }
+    },
+    "filename": "API-source-code/app/Http/Controllers/ApiSailors.php",
+    "groupTitle": "Sailors"
+  },
+  {
+    "type": "patch",
+    "url": "/sailors/update",
+    "title": "Update a sailor.",
+    "name": "updateSailor__",
+    "description": "<p>Update a sailor</p> ",
+    "group": "Sailors",
+    "permission": [
+      {
+        "name": "None"
+      }
+    ],
+    "version": "1.0.0",
+    "filename": "API-source-code/app/Http/Controllers/ApiSailors.php",
+    "groupTitle": "Sailors"
+  },
+  {
     "type": "post",
     "url": "/soldiers/{id}",
     "title": "Insert a new soldier.",
@@ -311,6 +446,104 @@ define({ "api": [
             "optional": false,
             "field": "Achternaam",
             "description": "<p>The lastname of the soldier.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Stam_nr",
+            "description": "<p>The service number.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "Regiment",
+            "description": "<p>The id of the regiment.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "GeborenPlaats",
+            "description": "<p>The birth place.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "GeborenDatum",
+            "description": "<p>The date of birth.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "OverledenLocatie",
+            "description": "<p>The exact location of death.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "OverledenDatum",
+            "description": "<p>The date of death.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "OverledenPlaats",
+            "description": "<p>The city where the soldier died</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Doodsoorzaak",
+            "description": "<p>The Cause of death.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Geslacht",
+            "description": "<p>The gender of the soldier.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Eenheid",
+            "description": "<p>The land they serve.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Rang",
+            "description": "<p>The rank of the soldier.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Graf_referentie",
+            "description": "<p>The grave number on the graveyard.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Dienst",
+            "description": "<p>The Service years of the soldiers.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "Notitie",
+            "description": "<p>Extra notation of the soldier.</p> "
           }
         ]
       }

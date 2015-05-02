@@ -20,7 +20,12 @@ class ApiSailors extends CallbackSailors
     }
 
     /**
-     *
+     * @api             {get} /sailors/all Get all the sailors
+     * @apiName         getSailors()
+     * @apiDescription  Get all the sailors.
+     * @apiGroup        Sailors
+     * @apiPermission   None
+     * @apiVersion      1.0.0
      */
     public function getSailors()
     {
@@ -48,7 +53,12 @@ class ApiSailors extends CallbackSailors
     }
 
     /**
-     *
+     * @api             {get} /sailor/{id} Get a specific sailor
+     * @apiName         getSailor
+     * @apidescription  Get a specific sailor.
+     * @apiGroup        Sailors
+     * @apiPermission   None
+     * @apiVersion      1.0.0
      */
     public function getSailor()
     {
@@ -56,7 +66,20 @@ class ApiSailors extends CallbackSailors
     }
 
     /**
+     * @api             {post} /sailors/insert Insert new saolor
+     * @apiname         insertSailor
+     * @apiDescription  Insert a new sailor
+     * @apiGroup        Sailors
+     * @apiPermission   none
+     * @apiVersion      1.0.0
      *
+     * @apiParam        {String}  Achternaam        The sailor his lastname.
+     * @apiParam        {String}  Voornaam          The sailor his firstname.
+     * @apiParam        {String}  Geslacht          The gender of the sailor.
+     * @apiParam        {String}  Graad             The rank on the ship.
+     * @apiParam        {String}  Schip             The ship they working on.
+     * @apiParam        {String}  GeborenPlaats     Place of birth.
+     * @apiParam        {String}  GeborenDatum      Date of birth.
      */
     public function insertSailor()
     {
@@ -90,16 +113,37 @@ class ApiSailors extends CallbackSailors
     }
 
     /**
-     *
+     * @api             {patch} /sailors/update Update a sailor.
+     * @apiName         updateSailor()
+     * @apiDescription  Update a sailor
+     * @apiGroup        Sailors
+     * @apiPermission   None
+     * @apiVersion      1.0.0
      */
     public function updateSailor($id)
     {
-        $Sailors                   = Sailors::find($id);
-        $Sailors->Achternaam       = Request::get('Achternaam');
-        $Sailors->Voornaam         = Request::get('Voornaam');
-        $Sailors->Geslacht         = Request::get('Geslacht');
-        $Sailors->Graad            = Request::get('Graad');
-        $Sailors->Schip            = Request::get('Schip');
+        $Sailors = Sailors::find($id);
+
+        if (Request::get('Achternaam')) {
+            $Sailors->Achternaam = Request::get('Achternaam');
+        }
+
+        if (Request::get('Voornaam')) {
+            $Sailors->Voornaam = Request::get('Voornaam');
+        }
+
+        if (Request::get('Geslacht')) {
+            $Sailors->Geslacht = Request::get('Geslacht');
+        }
+
+        if (Request::get('Graad')) {
+            $Sailors->Graad = Request::get('Graad');
+        }
+
+        if (Request::get('Schip')) {
+            $Sailors->Schip = Request::get('Schip');
+        }
+
         $Sailors->Geboren_plaats   = Request::get('GeborenPlaats');
         $Sailors->Geboren_datum    = Request::get('GeborenDatum');
         $Sailors->Overleden_plaats = Request::get('OverledenPlaats');
@@ -109,7 +153,12 @@ class ApiSailors extends CallbackSailors
     }
 
     /**
-     *
+     * @api             {delete} /sailors/delete/{id} Delete a sailor
+     * @apiName         deleteSoldier()
+     * @apiDescription  Delete a soldier
+     * @apiGroup        Sailors
+     * @apiPermission   Admin
+     * @apiVersion      1.0.0
      */
     public function deleteSailor($id)
     {
