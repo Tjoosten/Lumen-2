@@ -1,6 +1,6 @@
 <?php
 
-class testSoldiers extends TestCase {
+class TestSoldiers extends TestCase {
 
     public function testInsert()
     {
