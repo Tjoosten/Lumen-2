@@ -18,7 +18,7 @@ class CallbackGraveyards extends Controller
         return [
             'error'   => true,
             'message' => 'Graveyard successfull updated.'
-        ]
+        ];
     }
 
     public function transformNoGraveyard()

@@ -35,8 +35,8 @@ $app->patch('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@Updategr
 // $app->get('', '');
 
 // Routes for sailors.
-// $app->get('', '');
-// $app->get('', '');
+$app->get('/sailors/all', 'App\Http\Controllers\ApiSailors@getSailors');
+$app->delete('/sailors/delete','App\Http\Controllers\ApiSailors@deleteSailors');
 
 // Routes for political prinsoners.
 // $app->get('', '');
