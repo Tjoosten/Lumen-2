@@ -38,4 +38,14 @@ class SoldiersTest extends TestCase {
         $this->assertArrayHaskey('Geboorte datum', $dataArray);
         $this->assertArrayHasKey('Burgerlijke stand', $dataArray);
     }
+
+    public function testSpecificSoldierRoute()
+    {
+        $response = $this->call('GET', '/soldiers/4');
+        $array = json_decode($response->getContent(), true);
+
+        $this->assertNotEmpty($array);
+        $this->assertEquals(200, $response->getStatusCode());
+        $this->assertTrue(sizeof($array) > 0);
+    }
 }
