@@ -1,6 +1,6 @@
 /lumen.log
 /vendor
 /node_modules
-/composer.lock
+composer.lock
 .env
 /.idea
