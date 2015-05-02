@@ -7,6 +7,13 @@
 
 Lumen API is een gebouwd op het Lumen framework van laravel.
 
+## Installation
+
+1) Copy the `.env.example` to `.env` and edit the configuration.
+2) Run `sudo composer install`. 
+3) Run `php artisan migrate`
+4) And your done.
+
 ## Costum artisan commands.
 
 The API has its own cli commands, the costum commands are:
