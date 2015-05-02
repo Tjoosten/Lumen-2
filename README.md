@@ -1,6 +1,7 @@
 ## Lumen API
 
 [![Latest Version](https://img.shields.io/github/tag/Tjoosten/lumen-2.svg?style=flat&label=release)](https://github.com/tjoosten/lumen-2/tags)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
 [![Join the chat at https://gitter.im/Tjoosten/Lumen-2](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Tjoosten/Lumen-2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/Tjoosten/Lumen-2.svg?branch=master)](https://travis-ci.org/Tjoosten/Lumen-2)
 [![devDependency Status](https://img.shields.io/david/dev/Tjoosten/lumen-2.svg?style=flat)](https://david-dm.org/Tjoosten/lumen-2#info=devDependencies)
