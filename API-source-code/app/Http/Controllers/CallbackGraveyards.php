@@ -5,6 +5,22 @@ namespace App\Http\Controllers;
 class CallbackGraveyards extends Controller
 {
 
+    public function transformErrorUpdate()
+    {
+        return [
+            'error'   => true,
+            'message' => 'Could not update the graveyard.'
+        ];
+    }
+
+    public function transformSuccessUpdate()
+    {
+        return [
+            'error'   => true,
+            'message' => 'Graveyard successfull updated.'
+        ]
+    }
+
     public function transformNoGraveyard()
     {
         return [
