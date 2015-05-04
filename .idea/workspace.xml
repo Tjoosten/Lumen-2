@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="579b6cbf-7cfa-4f8f-b207-077503f735d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/endpoints.md" afterPath="$PROJECT_DIR$/docs/endpoints.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="Lumen-2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="endpoints.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/endpoints.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71884984" vertical-offset="0" max-vertical-offset="626">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.57507986" vertical-offset="0" max-vertical-offset="626">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -612,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5942948" vertical-offset="0" max-vertical-offset="750">
-          <caret line="34" column="21" selection-start-line="24" selection-start-column="0" selection-end-line="28" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.6196513" vertical-offset="119" max-vertical-offset="750">
+          <caret line="43" column="21" selection-start-line="50" selection-start-column="0" selection-end-line="52" selection-end-column="84" />
           <folding>
             <marker date="1430741977000" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
@@ -622,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/endpoints.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71884984" vertical-offset="0" max-vertical-offset="626">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.57507986" vertical-offset="0" max-vertical-offset="626">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding />
         </state>
       </provider>

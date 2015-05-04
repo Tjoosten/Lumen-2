@@ -20,6 +20,9 @@ De Api has the following endpoints.
 
 | Url:                      | Method:            |
 | :------------------------ | ------------------ |
+| /regiments/all            | `GET`              |
+| /regiments/{id}           | `GET`              |
+| /regiments/insert         | `POST`             |
 
 ## Endpoints for graveyards.
 
@@ -28,4 +31,4 @@ De Api has the following endpoints.
 | /graveyards/all           | `GET`              |
 | /graveyards/{id}          | `GET`              |
 | /graveyards/insert        | `POST`             |
-| /Graveyards/update/{id}   | `PATCH`            |
+| /graveyards/update/{id}   | `PATCH`            |
