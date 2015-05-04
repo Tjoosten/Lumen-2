@@ -6,6 +6,7 @@ API: Soldier insert method.
 Insert a new soldier. 
 
 **Usage url:** `curl https://www.domain.be/soliders/insert`
+**Permission:** None
 
 ## Request.
 
@@ -22,6 +23,15 @@ Insert a new soldier.
 | `Overleden_datum`   | Date of death.                              |
 | `Overleden_plaats`  | City where the soldier died.                |
 | `Herdenking_id`     | The ID of the graveyard.                    |
-|
-|
-|
+| `Geslacht`          | The gender of the soldier.                  |
+| `Eenheid`           | The country they serve.                     |
+| `Rang`              | The military grade they have.               |
+| `Graf_referentie`   | The Grave number on the graveyard.          |
+| `Dienst`            | The year they go in the military.           |
+| `Notitie`           | Extra notition of the soldier.              | 
+
+## Outputs 
+
+### Success 
+
+### Failure 
