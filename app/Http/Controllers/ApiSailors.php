@@ -104,8 +104,14 @@ class ApiSailors extends CallbackSailors
             $Sailors->Schip = Request::get('Schip');
         }
 
-        $Sailors->Geboren_plaats   = Request::get('GeborenPlaats');
-        $Sailors->Geboren_datum    = Request::get('GeborenDatum');
+        if (Request::get('GeborenPlaats')) {
+            $Sailors->Geboren_plaats   = Request::get('GeborenPlaats');
+        }
+
+        if (Request::get('GeborenDatum')) {
+            $Sailors->Geboren_datum = Request::get('GeborenDatum');
+        }
+
         $Sailors->Overleden_plaats = Request::get('OverledenPlaats');
         $Sailors->Overleden_Datum  = Request::get('OverledenDatum');
         $Sailors->Woonplaats       = Request::get('Woonplaays');

@@ -24,6 +24,10 @@ Class ApiRegiments extends CallbackRegiments
         $regiments = Divisie:all()
     }
 
+    /**
+     * @param $id
+     * @return Response
+     */
     public function getRegiment($id)
     {
         $Regiment = Divisie::where('id', $id)->get();
@@ -45,6 +49,11 @@ Class ApiRegiments extends CallbackRegiments
         return $response;
     }
 
+    /**
+     * Insert an ew regiment
+     *
+     * @return Response
+     */
     public function insertRegiment()
     {
         $regiment = new Divisie;
@@ -72,6 +81,12 @@ Class ApiRegiments extends CallbackRegiments
         return $response;
     }
 
+    /**
+     * Update a regiment
+     *
+     * @param $id
+     * @return Response
+     */
     public function updateRegiment($id)
     {
         $regiment = Divisie::where('id', '=', $id);
@@ -88,12 +103,16 @@ Class ApiRegiments extends CallbackRegiments
             $content = [ 'message' => 'Regiment successfull updated' ];
         }
 
-        $response = response($content, $mime);
+        $response = response($content, $status);
         $response->header($mime);
 
-
+        return $response;
     }
 
+    /**
+     * @param $id
+     * @return Response
+     */
     public function deleteRegiments($id)
     {
         $regiment = Divisie::find($id);
