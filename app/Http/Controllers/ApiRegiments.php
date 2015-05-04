@@ -25,6 +25,8 @@ Class ApiRegiments extends CallbackRegiments
     }
 
     /**
+     * Get all the regiments.
+     *
      * @param $id
      * @return Response
      */
@@ -110,6 +112,8 @@ Class ApiRegiments extends CallbackRegiments
     }
 
     /**
+     * Delete a regiment.
+     *
      * @param $id
      * @return Response
      */

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="579b6cbf-7cfa-4f8f-b207-077503f735d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/apidoc.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php" />
     </list>
     <ignored path="Lumen-2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39719626" vertical-offset="0" max-vertical-offset="642">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="631">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,7 +109,6 @@
         <option value="$PROJECT_DIR$/.env-example" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiSoldiers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiSailors.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiBegraafplaatsen.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/readme.md" />
@@ -118,6 +118,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/docs/soldiers/insert-soldier.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php" />
       </list>
     </option>
   </component>
@@ -169,92 +170,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="soldiers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lumen-2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,16 +268,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="748" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="748" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246951" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -531,36 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31061807" vertical-offset="1514" max-vertical-offset="2145">
-          <caret line="114" column="7" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
-          <folding>
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder=" @param $id ..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder=" Insert an ew regiment ..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder=" Update a regiment ..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder=" @param $id ..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430740712000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiBegraafplaatsen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33280507" vertical-offset="600" max-vertical-offset="2355">
@@ -673,8 +558,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39719626" vertical-offset="0" max-vertical-offset="642">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.25700936" vertical-offset="0" max-vertical-offset="642">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <marker date="1430744771000" expanded="true" signature="-1:-1" placeholder="php:" />
+            <marker date="1430744771000" expanded="true" signature="-1:-1" placeholder="matrix:" />
+            <marker date="1430744771000" expanded="true" signature="-1:-1" placeholder="allow_failures:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiRegiments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5721078" vertical-offset="239" max-vertical-offset="2130">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <marker date="1430744973000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder=" Get all the regiments. ..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder=" Insert an ew regiment ..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder=" Update a regiment ..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder=" Delete a regiment. ..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430744973000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="655">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
