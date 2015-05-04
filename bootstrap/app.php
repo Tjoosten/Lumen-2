@@ -51,18 +51,18 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//     // 'Illuminate\Cookie\Middleware\EncryptCookies',
-//     // 'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
-//     // 'Illuminate\Session\Middleware\StartSession',
-//     // 'Illuminate\View\Middleware\ShareErrorsFromSession',
+ $app->middleware([
+'Illuminate\Cookie\Middleware\EncryptCookies',
+'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
+'Illuminate\Session\Middleware\StartSession',
+'Illuminate\View\Middleware\ShareErrorsFromSession',
 //     // 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken',
-// ]);
+ ]);
 
  $app->routeMiddleware([
-   // 'auth' => 'App\Http\Middleware\Authenticate',
+  'auth' => 'App\Http\Middleware\Authenticate',
    'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-   // 'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+  'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
  ]);
 
 /*

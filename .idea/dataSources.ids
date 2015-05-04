@@ -100,6 +100,7 @@
       <column name="Overlijden_datum" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="Bron" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <column name="BID" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Doodsoorzaak" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="VSID"/>
       <index name="Stam_nr_UNIQUE" unique="true" columns="Stam_nr"/>
     </table>

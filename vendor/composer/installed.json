@@ -2217,96 +2217,6 @@
         "homepage": "http://laravel.com"
     },
     {
-        "name": "laravel/lumen-framework",
-        "version": "v5.0.2",
-        "version_normalized": "5.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/laravel/lumen-framework.git",
-            "reference": "729490d74a405b511a660441f0633b246ab6e755"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/729490d74a405b511a660441f0633b246ab6e755",
-            "reference": "729490d74a405b511a660441f0633b246ab6e755",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/auth": "5.0.*",
-            "illuminate/bus": "5.0.*",
-            "illuminate/cache": "5.0.*",
-            "illuminate/config": "5.0.*",
-            "illuminate/console": "5.0.*",
-            "illuminate/container": "5.0.*",
-            "illuminate/contracts": "5.0.*",
-            "illuminate/cookie": "5.0.*",
-            "illuminate/database": "5.0.*",
-            "illuminate/encryption": "5.0.*",
-            "illuminate/events": "5.0.*",
-            "illuminate/filesystem": "5.0.*",
-            "illuminate/hashing": "5.0.*",
-            "illuminate/http": "5.0.*",
-            "illuminate/pagination": "5.0.*",
-            "illuminate/queue": "5.0.*",
-            "illuminate/session": "5.0.*",
-            "illuminate/support": "5.0.*",
-            "illuminate/translation": "5.0.*",
-            "illuminate/validation": "5.0.*",
-            "illuminate/view": "5.0.*",
-            "monolog/monolog": "~1.0",
-            "mtdowling/cron-expression": "~1.0",
-            "nikic/fast-route": "0.4.*",
-            "php": ">=5.4.0",
-            "symfony/http-foundation": "2.6.*",
-            "symfony/http-kernel": "2.6.*",
-            "symfony/security-core": "2.6.*",
-            "symfony/var-dumper": "2.6.*"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4.0"
-        },
-        "suggest": {
-            "vlucas/phpdotenv": "Required to use .env files (~1.0)."
-        },
-        "time": "2015-04-16 01:59:14",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Laravel\\Lumen\\": "src/"
-            },
-            "classmap": [
-                "src/Foundation"
-            ],
-            "files": [
-                "src/helpers.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Laravel Lumen Framework.",
-        "homepage": "http://laravel.com",
-        "keywords": [
-            "framework",
-            "laravel",
-            "lumen"
-        ]
-    },
-    {
         "name": "league/fractal",
         "version": "0.12.0",
         "version_normalized": "0.12.0.0",
@@ -3415,6 +3325,96 @@
             "phpunit",
             "testing",
             "xunit"
+        ]
+    },
+    {
+        "name": "laravel/lumen-framework",
+        "version": "v5.0.2",
+        "version_normalized": "5.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel/lumen-framework.git",
+            "reference": "729490d74a405b511a660441f0633b246ab6e755"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/729490d74a405b511a660441f0633b246ab6e755",
+            "reference": "729490d74a405b511a660441f0633b246ab6e755",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/auth": "5.0.*",
+            "illuminate/bus": "5.0.*",
+            "illuminate/cache": "5.0.*",
+            "illuminate/config": "5.0.*",
+            "illuminate/console": "5.0.*",
+            "illuminate/container": "5.0.*",
+            "illuminate/contracts": "5.0.*",
+            "illuminate/cookie": "5.0.*",
+            "illuminate/database": "5.0.*",
+            "illuminate/encryption": "5.0.*",
+            "illuminate/events": "5.0.*",
+            "illuminate/filesystem": "5.0.*",
+            "illuminate/hashing": "5.0.*",
+            "illuminate/http": "5.0.*",
+            "illuminate/pagination": "5.0.*",
+            "illuminate/queue": "5.0.*",
+            "illuminate/session": "5.0.*",
+            "illuminate/support": "5.0.*",
+            "illuminate/translation": "5.0.*",
+            "illuminate/validation": "5.0.*",
+            "illuminate/view": "5.0.*",
+            "monolog/monolog": "~1.0",
+            "mtdowling/cron-expression": "~1.0",
+            "nikic/fast-route": "0.4.*",
+            "php": ">=5.4.0",
+            "symfony/http-foundation": "2.6.*",
+            "symfony/http-kernel": "2.6.*",
+            "symfony/security-core": "2.6.*",
+            "symfony/var-dumper": "2.6.*"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4.0"
+        },
+        "suggest": {
+            "vlucas/phpdotenv": "Required to use .env files (~1.0)."
+        },
+        "time": "2015-04-16 01:59:14",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Laravel\\Lumen\\": "src/"
+            },
+            "classmap": [
+                "src/Foundation"
+            ],
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com"
+            }
+        ],
+        "description": "The Laravel Lumen Framework.",
+        "homepage": "http://laravel.com",
+        "keywords": [
+            "framework",
+            "laravel",
+            "lumen"
         ]
     }
 ]

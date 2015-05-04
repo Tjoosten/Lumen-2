@@ -11,8 +11,10 @@
 |
 */
 
+$app->get('/', ['middleware' => 'auth.basic', 'uses' => 'App\Http\Controllers\ApiVarious@frontpage']);
+
 // Misc routes.
-$app->get('/', 'App\Http\Controllers\ApiVarious@frontpage');
+//$app->get('/', 'App\Http\Controllers\ApiVarious@frontpage');
 
 // Routes for the soldiers.
 $app->get('/soldiers/all', 'App\Http\Controllers\ApiSoldiers@getSoldiers');
