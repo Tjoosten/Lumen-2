@@ -19,3 +19,9 @@ Insert a new soldier.
 | `Geboren_datum`     | Date of birth.                              |
 | `Geboren_plaats`    | Place of birth.                             |
 | `Overleden_locatie` | Exact location of death.                    |
+| `Overleden_datum`   | Date of death.                              |
+| `Overleden_plaats`  | City where the soldier died.                |
+| `Herdenking_id`     | The ID of the graveyard.                    |
+|
+|
+|
