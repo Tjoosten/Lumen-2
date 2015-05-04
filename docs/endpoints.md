@@ -7,6 +7,8 @@ De Api has the following endpoints.
 
 | Url:                      | Method:            |
 | :------------------------ | ------------------ |
+| /soldiers/all             | `GET`              |
+| /soldiers/{id}            | `GET`              |
 
 ## Endpoints for sailors.
 
