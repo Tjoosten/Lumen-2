@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="579b6cbf-7cfa-4f8f-b207-077503f735d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/soldiers/insert-soldier.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/soldiers/insert-soldier.md" afterPath="$PROJECT_DIR$/docs/soldiers/insert-soldier.md" />
     </list>
     <ignored path="Lumen-2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="insert-soldier.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/soldiers/insert-soldier.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07188498" vertical-offset="0" max-vertical-offset="626">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -652,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/soldiers/insert-soldier.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07188498" vertical-offset="0" max-vertical-offset="626">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding />
         </state>
       </provider>
