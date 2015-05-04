@@ -9,6 +9,7 @@ De Api has the following endpoints.
 | :------------------------ | ------------------ |
 | /soldiers/all             | `GET`              |
 | /soldiers/{id}            | `GET`              |
+| /soldiers/insert          | `POST`             |
 
 ## Endpoints for sailors.
 
@@ -24,3 +25,7 @@ De Api has the following endpoints.
 
 | Url:                      | Method:            |
 | :------------------------ | ------------------ |
+| /graveyards/all           | `GET`              |
+| /graveyards/{id}          | `GET`              |
+| /graveyards/insert        | `POST`             |
+| /Graveyards/update/{id}   | `PATCH`            |

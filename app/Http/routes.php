@@ -25,8 +25,8 @@ $app->post('/soldiers/insert', 'App\Http\Controllers\ApiSoldiers@insert');
 $app->get('/graveyards/all', 'App\Http\Controllers\ApiBegraafplaatsen@graveyards');
 
 $app->get('/graveyards/{id}', 'App\Http\Controllers\ApiBegraafplaatsen@graveyard');
-$app->put('/graveyards/insert/{id}','App/Http/Controllers/ApiBegraafplaatsen@InsertGraveyard'); // Insert
-$app->patch('/graveyards/update/{id}','App/Http/Controllers/ApiBegraafplaatsen@Updategraveyard'); // Update
+$app->put('/graveyards/insert/{id}','App/Http/Controllers/ApiBegraafplaatsen@InsertGraveyard');
+$app->patch('/graveyards/update/{id}','App/Http/Controllers/ApiBegraafplaatsen@Updategraveyard');
 //$app->delete('/graveyards/{id}','App/Http/Controllers/ApiBegraafplaatsen@'): // Delete
 // ------------------------------------------------------------------------------------
 
