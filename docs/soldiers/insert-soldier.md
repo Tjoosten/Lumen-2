@@ -5,7 +5,7 @@ API: Soldier insert method.
 
 Insert a new soldier. 
 
-Usage url: `curl https://www.domain.be/soliders/insert`
+**Usage url:** `curl https://www.domain.be/soliders/insert`
 
 ## Request.
 
