@@ -52,8 +52,8 @@
       <file leaf-file-name="insert-soldier.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/soldiers/insert-soldier.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.21565495" vertical-offset="0" max-vertical-offset="626">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="10" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -651,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/soldiers/insert-soldier.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23961662" vertical-offset="0" max-vertical-offset="626">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.21565495" vertical-offset="0" max-vertical-offset="626">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="10" selection-end-column="63" />
           <folding />
         </state>
       </provider>

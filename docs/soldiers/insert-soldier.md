@@ -7,5 +7,6 @@ Insert a new soldier.
 
 **Request**
 
-- `Voornaam`
-- `Achternaam`
+| Parameter:    | Description:                                |
+| :------------ | ------------------------------------------- |
+| `Voornaam`    | The firstname of the soldier.               |
