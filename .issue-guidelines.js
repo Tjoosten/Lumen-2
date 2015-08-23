@@ -21,36 +21,6 @@ var assert = require('assert')
 
 module.exports = {
 
-    'pull-requests': {
-
-        'should always be made against -wip branches': function (pull) {
-            assert.ok(/\-wip$/.test(pull.base.ref))
-        },
-
-        'should always be made from feature branches': function (pull) {
-            assert.notEqual(pull.head.ref, 'master')
-        },
-
-        'should always include a unit test if changing js files': function (pull) {
-            var hasJS    = false
-            var hasTests = false
-
-            pull.files.forEach(function (file) {
-                if (/^js\/[^./]+.js/.test(file.filename))             hasJS    = true
-                if (/^js\/tests\/unit\/[^.]+.js/.test(file.filename)) hasTests = true
-            })
-
-            assert.ok(!hasJS || hasJS && hasTests)
-        },
-
-        'after': function (pull) {
-            if (pull.reporter.stats.failures) {
-                pull.reportFailures(pull.close.bind(pull))
-            }
-        }
-
-    },
-
     'issues': {
 
         'before': function (issue) {
